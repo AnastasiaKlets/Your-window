@@ -1,0 +1,24 @@
+@import 'base/fonts';
+
+* {
+	font-family: 'Inter', sans-serif;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+.container {
+	max-width: 1400px;
+	width: 82.85%;
+	margin: 0 auto;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+.br {
+	display: none;
+}
+
+@import "blocks/title";
+@import "blocks/button";
+@import 'media/general';
