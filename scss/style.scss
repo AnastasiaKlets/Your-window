@@ -6,6 +6,9 @@
 	padding: 0;
 	scroll-behavior: smooth;
 }
+body{
+	background: #F3F5F9;
+}
 .container {
 	max-width: 1400px;
 	width: 82.85%;
@@ -21,4 +24,5 @@ a {
 
 @import "blocks/title";
 @import "blocks/button";
+@import "blocks/header";
 @import 'media/general';
