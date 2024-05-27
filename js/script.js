@@ -23,11 +23,11 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
         mainClass = indicatorsClass.slice(0, -11);
     }
     if (totalCounter) {
-        total = document.querySelector(totalCounter);
+        total = container.querySelector(totalCounter);
         total.textContent = slides.length;
     }
     if (currentCounter) {
-        current = document.querySelector(currentCounter)
+        current = container.querySelector(currentCounter)
         current.textContent = slideIndex;
     }
 
@@ -56,12 +56,17 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
 
         for (let i = 0; i < slides.length; i++) {
             const dot = document.createElement('div');
-            mobile ? dot.style.width = 100 / slides.length + '%' : dot.style.width = '';
+            if (!containerSelector.includes('features')) {
+                mobile ? dot.style.width = 100 / slides.length + '%' : dot.style.width = '';
+            }
             dot.setAttribute('data-slide-to', i + 1);
             dot.classList.add(`${mainClass}_dot`);
             if (i == 0) {
                 dot.classList.add(`${mainClass}_active`);
             } 
+            if (containerSelector.includes('features')) {
+                dot.textContent = `0${i + 1}.`;
+            }
             indicators.append(dot);
             dots.push(dot);
         }
@@ -100,7 +105,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
             slide.style.width = width;
         });
         
-        if (indicatorsClass) {
+        if (indicatorsClass && !containerSelector.includes('features')) {
             let dots = document.querySelectorAll(`.${mainClass}_dot`);
             dots.forEach((dot) => {
                 mobile ? dot.style.width = 100 / slides.length + '%' : dot.style.width = '';
@@ -243,6 +248,20 @@ if (document.querySelector('.reviews_field') != null) {
         elementsPerPage: 3,
         elementsPerPageMobile: 1,
         columnGap: 24,
+        swipe: true,
+    });
+}
+if (document.querySelector('.features_field') != null) {
+    slider({
+        containerSelector: '.features_container',
+        slideSelector: '.features_slide',
+        nextSlideSelector: '.features_next',
+        prevSlideSelector: '.features_prev',
+        wrapperSelector: '.features_wrapper',
+        fieldSelector: '.features_field',
+        indicatorsClass: 'features_indicators',
+        totalCounter: '#total',
+        currentCounter: '#current',
         swipe: true,
     });
 }
