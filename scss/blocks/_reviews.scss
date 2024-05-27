@@ -51,6 +51,8 @@
             padding: 0 20px;
         }
         &_content.video {
+            width: calc(100% - 6px);
+            height: calc(100% - 6px);
             padding: 3px;
             img {
                 width: 100%;
