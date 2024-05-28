@@ -55,8 +55,11 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
         container.append(indicators);
 
         for (let i = 0; i < slides.length; i++) {
+            if (i > 3 && containerSelector.includes('portfolio')) {
+                continue;
+            }
             const dot = document.createElement('div');
-            if (!containerSelector.includes('features')) {
+            if (!containerSelector.includes('features') && !containerSelector.includes('portfolio')) {
                 mobile ? dot.style.width = 100 / slides.length + '%' : dot.style.width = '';
             }
             dot.setAttribute('data-slide-to', i + 1);
@@ -66,6 +69,9 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
             } 
             if (containerSelector.includes('features')) {
                 dot.textContent = `0${i + 1}.`;
+            }
+            if (containerSelector.includes('portfolio')) {
+                dot.style.background = `url('../img/portfolio/portfolio_${i + 1}.jpg') no-repeat 50%/cover`;
             }
             indicators.append(dot);
             dots.push(dot);
@@ -105,7 +111,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
             slide.style.width = width;
         });
         
-        if (indicatorsClass && !containerSelector.includes('features')) {
+        if (indicatorsClass && !containerSelector.includes('features') && !containerSelector.includes('portfolio')) {
             let dots = document.querySelectorAll(`.${mainClass}_dot`);
             dots.forEach((dot) => {
                 mobile ? dot.style.width = 100 / slides.length + '%' : dot.style.width = '';
@@ -133,7 +139,9 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
     }
 
 	function moveNext() {
-        field.classList.add('trans-5')
+        if (!containerSelector.includes('portfolio')) {
+            field.classList.add('trans-5')
+        }
         if (offset >= (deleteNotDigits(width) + gap) * (slides.length - 1)) {
 			offset = 0;
 		} else {
@@ -150,7 +158,9 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
     }
 
     function movePrev() {
-        field.classList.add('trans-5')
+        if (!containerSelector.includes('portfolio')) {
+            field.classList.add('trans-5')
+        }
         if (offset < deleteNotDigits(width)) {
 			offset = (deleteNotDigits(width) + gap) * (slides.length - 1);
 		} else {
@@ -168,12 +178,15 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
 
 	function changeActivity() {
         field.style.transform = `translateX(-${offset}px)`;
-        if (indicatorsClass) {
-            dots.forEach(dot => dot.classList.remove(`${mainClass}_active`));
-            dots[slideIndex-1].classList.add(`${mainClass}_active`);
-        }
         if (currentCounter) {
             current.textContent = slideIndex;
+        }
+        if (indicatorsClass) {
+            dots.forEach(dot => dot.classList.remove(`${mainClass}_active`));
+            if (containerSelector.includes('portfolio') && slideIndex > 4) {
+                return;
+            }
+            dots[slideIndex-1].classList.add(`${mainClass}_active`);
         }
     }
 
@@ -260,6 +273,20 @@ if (document.querySelector('.features_field') != null) {
         wrapperSelector: '.features_wrapper',
         fieldSelector: '.features_field',
         indicatorsClass: 'features_indicators',
+        totalCounter: '#total',
+        currentCounter: '#current',
+        swipe: true,
+    });
+}
+if (document.querySelector('.portfolio_field') != null) {
+    slider({
+        containerSelector: '.portfolio_container',
+        slideSelector: '.portfolio_slide',
+        nextSlideSelector: '.portfolio_next',
+        prevSlideSelector: '.portfolio_prev',
+        wrapperSelector: '.portfolio_wrapper',
+        fieldSelector: '.portfolio_field',
+        indicatorsClass: 'portfolio_indicators',
         totalCounter: '#total',
         currentCounter: '#current',
         swipe: true,
