@@ -6,6 +6,10 @@
 	padding: 0;
 	scroll-behavior: smooth;
 }
+body {
+	box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.25);
+	background: #f3f5f9;
+}
 .container {
 	max-width: 1160px;
 	width: 82.85%;

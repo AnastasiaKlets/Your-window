@@ -1,0 +1,131 @@
+@media (max-width:1720px) {
+
+}
+@media (max-width:1600px) {
+
+}
+@media (max-width:1440px) {
+    .features {
+        &_dot {
+            &:nth-child(1), &:nth-child(4) {
+                margin-left: 120%;
+            }
+        }
+    }
+}
+@media (max-width: 1200px) {
+    .features {
+        &_dot {
+            &:nth-child(1), &:nth-child(4) {
+                margin-left: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    .features {
+        padding-top: 62px;
+        &_header {
+            gap: 8px;
+        }
+        &_content {
+            position: static;
+            width: 100%;
+            margin-top: 20px;
+            & > img {
+                display: none;
+            }
+        }
+        &_slide {
+            .title {
+                text-align: center;
+            }
+            .title_16 {
+                margin-top: 10px;
+            }
+        }
+        &_controls {
+            width: 100%;
+            margin-top: 20px;
+        }
+        &_map {
+            width: 93.05%;
+            height: 68.6%;
+            &_image {
+                background: url('../img/profile_map_m.png') no-repeat 50%/cover;
+            }
+        }
+        &_bottom {
+            top: 62.5%;
+            bottom: auto;
+            width: 23.19%;
+        }
+        &_indicators {
+            left: 7%;
+            height: 76.6%;
+        }
+        &_dot {
+            font-size: 20px;
+            &:nth-child(1), &:nth-child(4) {
+                margin-left: 170%;
+            }
+        }
+        .button {
+            width: 100%;
+            padding: 0;
+        }
+        .mobile {
+            display: block;
+            width: 60%;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .features {
+        &_dot {
+            &:nth-child(1), &:nth-child(4) {
+                margin-left: 120%;
+            }
+        }
+        &_bottom {
+            top: 57.5%;
+        }
+    }
+}
+@media (max-width: 600px) {
+    .features {
+        &_indicators {
+            height: 68.6%;
+        }
+        &_dot {
+            width: 53px;
+            height: 53px;
+            font-size: 14px;
+            &:nth-child(1), &:nth-child(4) {
+                margin-left: 185%;
+            }
+        }
+        .button {
+            height: 43px;
+            font-size: 16px;
+        }
+    }
+}
+@media (max-width: 480px) {
+    .features {
+        &_bottom {
+            top: 50.5%;
+            .title {
+                font-size: 10px;
+            }
+        }
+        &_indicators {
+            height: 62.6%;
+        }
+        &_dot {
+            &:nth-child(1), &:nth-child(4) {
+                margin-left: 120%;
+            }
+        }
+    }
+}

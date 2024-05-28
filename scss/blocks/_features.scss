@@ -13,11 +13,18 @@
     }
     &_content {
         position: absolute;
+        top: 30px;
         left: 50%;
         width: 50%;
-        #rehau {
+        & > img {
             position: relative;
-            left: -50px;
+            left: -8.33%;
+            width: 67.66%;
+        }
+    }
+    &_slide {
+        .title_16 {
+            margin-top: 20px;
         }
     }
     &_container {
@@ -51,6 +58,19 @@
             background: url('../img/profile_map.png') no-repeat 50%/cover;
         }
     }
+    &_bottom {
+        position: absolute;
+        right: 0;
+        bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        width: 20.19%;
+        text-align: end;
+        img {
+            width: 32%;
+        }
+    }
     &_prev, &_next {
         cursor: pointer;
     }
@@ -61,8 +81,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 100%;
-        
+        height: 90%;
     }
     &_dot {
         display: flex;
@@ -76,11 +95,8 @@
         font-size: 24px;
         color: #fff;
         text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-        &:nth-child(1) {
-            margin-left: 129px;
-        }
-        &:nth-child(4) {
-            margin: 0  0 60px 129px;
+        &:nth-child(1), &:nth-child(4) {
+            margin-left: 138.7%;
         }
         &:hover {
             color: #747272;
@@ -91,5 +107,9 @@
     .button {
         min-width: 32.58%;
         padding: 0 43px;
+        text-transform: uppercase;
+    }
+    .mobile {
+        display: none;
     }
 }
