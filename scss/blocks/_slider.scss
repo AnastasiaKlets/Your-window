@@ -1,6 +1,7 @@
 #content-slider {
   width:100%;
   height:576px;
+  margin-bottom: 50px;
 }
 #slider {
   height:100%;
@@ -23,19 +24,15 @@
   position:absolute;
   top:-576px;
   list-style:none;
-  img{
-    width:100%;
-    height: 100%;
-  }
 }
 
 #slider li.firstanimation {
-  -moz-animation:cycle 20s linear infinite;
-  -webkit-animation:cycle 20s linear infinite;
+  -moz-animation:cycle 2s linear infinite;
+  -webkit-animation:cycle 2s linear infinite;
 }
 #slider li.secondanimation {
-  -moz-animation:cycletwo 20s linear infinite;
-  -webkit-animation:cycletwo 20s linear infinite;
+  -moz-animation:cycletwo 2s linear infinite;
+  -webkit-animation:cycletwo 2s linear infinite;
 }
 
 #slider:hover li,{
@@ -43,8 +40,6 @@
   -webkit-animation-play-state:paused;
 }
 
-
-/* ANIMATION */
 @-moz-keyframes cycle {
   0%  { top:0; }
   25%  { top:0; }
@@ -84,4 +79,149 @@
   98% { top:100%; opacity:0; z-index:0; }
   99% { top:-100%; opacity:0; z-index:-1; }
   100%{ top:-100%; opacity:0; z-index:-1; }
+}
+.firstanimation{
+  &_wrapper{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: space-between;
+    height: 100%;
+    &_block{
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin-top: 50px;
+      button{
+        width: 60%;
+      }
+      &_withImg{
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 30% 30% 30%;
+        &_block{
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+        img{
+          width: 45%;
+        }
+      }
+    }
+    &_block2{
+      display: flex;
+      flex-direction: column;
+      &_circles{
+        position: absolute;
+      }
+      &_circlesIn{
+        display: flex;
+        gap: 35px;
+        &_circle{
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          align-items: center;
+          &_title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+          }
+          &_titledop{
+            margin-left: 36px;
+          }
+          &_text{
+            border-radius: 10px;
+            width: 140px;
+            height: 40px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          }
+        }
+      }
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+.pulse {
+  position: relative; // Нужно будет в будущем, для позиционирования эффекта
+  text-align: center;
+  padding: 10px; // Отступ можете подобрать свой.
+  border-radius: 50%; // Делаем икноку круглой
+  background: linear-gradient(180deg, #aae2fa 0%, rgba(96, 205, 252, 0.44) 100%);
+  width: 40px;
+  height: 40px;
+}
+.pulse::after,
+.pulse::before {
+  content: '';
+  position: absolute;
+  border: 2px solid #b6eaf3;
+  left: -20px;
+  opacity: 0;
+  right: -20px;
+  top: -20px;
+  bottom: -20px;
+  border-radius: 50%;
+  animation: pulse 2.5s linear infinite;
+}
+.pulse::after {
+  animation-delay: 1.25s;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+.secondanimation{
+  &_wrapper{
+    display: grid;
+    grid-template-columns: 52% 43%;
+    justify-content: space-between;
+    justify-items: stretch;
+    background: #FAFCFE;
+    img{
+     width: 100%;
+    }
+    &_block{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 25px;
+      &_title{
+        display: flex;
+        font-weight: 800;
+        font-size: 150px;
+        background: linear-gradient(111deg, #ff2626 0%, #b40c0c 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        height: 150px;
+        justify-content: center;
+      }
+      button{
+        width: 60%;
+      }
+      &_img{
+        display: grid;
+        grid-template-columns: 35% 35%;
+        justify-content: end;
+      }
+    }
+  }
 }
