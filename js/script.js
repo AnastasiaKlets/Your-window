@@ -54,14 +54,9 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
         indicators.classList.add(indicatorsClass);
         container.append(indicators);
 
-        for (let i = 0; i < slides.length; i++) {
-            if (i > 3 && containerSelector.includes('portfolio')) {
-                continue;
-            }
+        for (let i = 0; i < slides.length; i++) {            
             const dot = document.createElement('div');
-            if (!containerSelector.includes('features') && !containerSelector.includes('portfolio')) {
-                mobile ? dot.style.width = 100 / slides.length + '%' : dot.style.width = '';
-            }
+            mobile ? dot.style.width = 100 / slides.length + '%' : dot.style.width = '';
             dot.setAttribute('data-slide-to', i + 1);
             dot.classList.add(`${mainClass}_dot`);
             if (i == 0) {
@@ -70,8 +65,12 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
             if (containerSelector.includes('features')) {
                 dot.textContent = `0${i + 1}.`;
             }
-            if (containerSelector.includes('portfolio')) {
-                dot.style.background = `url('../img/portfolio/portfolio_${i + 1}.jpg') no-repeat 50%/cover`;
+            if (containerSelector.includes('portfolio') && !mobile) {
+                if (i < 4) {
+                    dot.style.background = `url('../img/portfolio/portfolio_${i + 1}.jpg') no-repeat 50%/cover`;
+                } else {
+                    dot.classList.add("hide");
+                }
             }
             indicators.append(dot);
             dots.push(dot);
@@ -111,10 +110,24 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
             slide.style.width = width;
         });
         
-        if (indicatorsClass && !containerSelector.includes('features') && !containerSelector.includes('portfolio')) {
+        if (indicatorsClass) {
             let dots = document.querySelectorAll(`.${mainClass}_dot`);
-            dots.forEach((dot) => {
+            dots.forEach((dot, index) => {
                 mobile ? dot.style.width = 100 / slides.length + '%' : dot.style.width = '';
+                if (containerSelector.includes('portfolio')) {
+                    if (mobile) {
+                        dot.classList.remove("hide");
+                        dot.style.background = '';
+                    } else {
+                        if (index < 4) {
+                            dot.classList.remove("hide");
+                            dot.style.background = `url('../img/portfolio/portfolio_${index + 1}.jpg') no-repeat 50%/cover`;
+                        } else {
+                            dot.classList.add("hide");
+                            dot.style.background = '';
+                        }
+                    }
+                }
             });
         }
 		
@@ -183,7 +196,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
         }
         if (indicatorsClass) {
             dots.forEach(dot => dot.classList.remove(`${mainClass}_active`));
-            if (containerSelector.includes('portfolio') && slideIndex > 4) {
+            if (containerSelector.includes('portfolio') && slideIndex > 4 && !mobile) {
                 return;
             }
             dots[slideIndex-1].classList.add(`${mainClass}_active`);
