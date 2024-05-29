@@ -335,3 +335,18 @@ if (document.querySelector('.accessories_field') != null) {
         swipe: true,
     });
 }
+
+if (document.querySelector('.materials_sliders') != null) {
+    let matearials_images = document.querySelectorAll('.profiles_wrapper img, .accessories_wrapper img');
+    let profiles_main = document.querySelector('.materials_images_profile');
+    let accessories_main = document.querySelector('.materials_images_accessory');
+    
+    matearials_images.forEach(image => {
+        image.addEventListener('click', (e) => {
+            let main_image;
+            let new_src = image.getAttribute('src').split('.')[0] + '_i.' + image.getAttribute('src').split('.')[1];
+            new_src.includes('profiles') ? main_image = profiles_main : main_image = accessories_main;
+            main_image.setAttribute('src', new_src);
+        });
+    });
+}
