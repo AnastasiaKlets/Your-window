@@ -1,4 +1,4 @@
-.consult {
+.consult, .thanks {
     position: relative;
     display: none;
     position: fixed;
@@ -118,11 +118,24 @@
         display: none;
     }
 }
-.consult.show{
+.consult.show, .thanks.show {
     animation: fadeIn 1s;
 }
-.consult.hide {
+.consult.hide, .thanks.hide {
     animation: fadeOut 1s;
+}
+.thanks {
+    &_content {
+        display: flex;
+        flex-direction: column;
+        gap: 19px;
+        &_image, .title_20 {
+            margin-top: 0;
+        }
+        .title_24 {
+            margin-top: 41px;
+        }
+    }
 }
 
 @keyframes fadeIn {

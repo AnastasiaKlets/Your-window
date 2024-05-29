@@ -318,7 +318,14 @@ function changeMaterial() {
 
 if (document.querySelector('.consult') != null) {
     modal('[data-modal]', 'data-close', '.consult');
+    modal('[data-thanks]', 'data-close', '.thanks');
 }
+
+document.querySelector('.consult_form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    closeModal('.consult');
+    openModal('.thanks');
+});
 
 if (document.querySelector('.reviews_field') != null) {
     slider({
