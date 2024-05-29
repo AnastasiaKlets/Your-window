@@ -265,6 +265,40 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
     }
 }
 
+function openModal(modalSelector) {
+    const modal = document.querySelector(modalSelector);
+    modal.classList.add('show');
+    modal.classList.remove('hide');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal(modalSelector) {
+    const modal = document.querySelector(modalSelector);
+    modal.classList.add('hide');
+    modal.classList.remove('show');
+    document.body.style.overflow = '';
+}
+
+function modal(triggerSelector, closeSelector, modalSelector) {
+    const modalTrigger = document.querySelectorAll(triggerSelector),
+        modal = document.querySelector(modalSelector);
+    modalTrigger.forEach(btn => {
+        btn.addEventListener('click', () => openModal(modalSelector));
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal || e.target.getAttribute(closeSelector) == '') {
+            closeModal(modalSelector);
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.code === "Escape" && modal.classList.contains('show')) { 
+            closeModal(modalSelector);
+        }
+    });
+}
+
 function changeMaterial() {
     if (document.querySelector('.materials_sliders') != null) {
         let matearials_images = document.querySelectorAll('.profiles_wrapper img, .accessories_wrapper img');
@@ -280,6 +314,10 @@ function changeMaterial() {
             });
         });
     }
+}
+
+if (document.querySelector('.consult') != null) {
+    modal('[data-modal]', 'data-close', '.consult');
 }
 
 if (document.querySelector('.reviews_field') != null) {
