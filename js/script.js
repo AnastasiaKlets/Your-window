@@ -305,3 +305,33 @@ if (document.querySelector('.portfolio_field') != null) {
         swipe: true,
     });
 }
+if (document.querySelector('.profiles_field') != null) {
+    slider({
+        containerSelector: '.profiles_container',
+        slideSelector: '.profiles_slide',
+        nextSlideSelector: '.profiles_next',
+        prevSlideSelector: '.profiles_prev',
+        wrapperSelector: '.profiles_wrapper',
+        fieldSelector: '.profiles_field',
+        indicatorsClass: 'profiles_indicators',
+        elementsPerPage: 5,
+        elementsPerPageMobile: 5,
+        columnGap: 20,
+        swipe: true,
+    });
+}
+if (document.querySelector('.accessories_field') != null) {
+    slider({
+        containerSelector: '.accessories_container',
+        slideSelector: '.accessories_slide',
+        nextSlideSelector: '.accessories_next',
+        prevSlideSelector: '.accessories_prev',
+        wrapperSelector: '.accessories_wrapper',
+        fieldSelector: '.accessories_field',
+        indicatorsClass: 'accessories_indicators',
+        elementsPerPage: 5,
+        elementsPerPageMobile: 5,
+        columnGap: 20,
+        swipe: true,
+    });
+}
