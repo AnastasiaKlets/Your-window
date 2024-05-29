@@ -1,0 +1,61 @@
+@media (max-width:1440px) {
+
+}
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 992px) {
+    .consult {
+        &_modal {
+            padding: 27px 22px 0 22px;
+            width: calc(100% - 44px);
+            max-width: none;
+            height: calc(95vh - 27px);
+            max-height: none;
+        }
+        &_close {
+            top: 9px;
+            right: 9px;
+            height: 36px;
+        }
+        &_image {
+            display: none;
+        }
+        &_content {
+            width: 100%;
+            &_image {
+                display: flex;
+                align-items: center;
+                margin-top: 16px;
+                height: auto;
+                width: 100%;
+                img {
+                    width: 50%;
+                }
+            }
+        }
+        &_form {
+            margin-top: 14px;
+            width: 100%;
+            &_input {
+                width: calc(100% - 20px);
+                padding: 16px 10px;
+            }
+        }
+        .button {
+            font-size: 20px;
+        }
+        .title_20 {
+            margin-top: 15px;
+        }
+        .mobile {
+            display: block;
+        }
+    }  
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 480px) {
+
+}
