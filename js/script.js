@@ -56,7 +56,9 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
 
         for (let i = 0; i < slides.length; i++) {            
             const dot = document.createElement('div');
-            mobile ? dot.style.width = 100 / slides.length + '%' : dot.style.width = '';
+            if (!containerSelector.includes('features')) {
+                mobile ? dot.style.width = 100 / slides.length + '%' : dot.style.width = '';
+            }
             dot.setAttribute('data-slide-to', i + 1);
             dot.classList.add(`${mainClass}_dot`);
             if (i == 0) {
@@ -113,7 +115,9 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
         if (indicatorsClass) {
             let dots = document.querySelectorAll(`.${mainClass}_dot`);
             dots.forEach((dot, index) => {
-                mobile ? dot.style.width = 100 / slides.length + '%' : dot.style.width = '';
+                if (!containerSelector.includes('features')) {
+                    mobile ? dot.style.width = 100 / slides.length + '%' : dot.style.width = '';
+                }
                 if (containerSelector.includes('portfolio')) {
                     if (mobile) {
                         dot.classList.remove("hide");
