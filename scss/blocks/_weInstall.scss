@@ -1,0 +1,45 @@
+.weInstall{
+  &_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    &_row1{
+      display: grid;
+      grid-template-columns: 58% 41%;
+      justify-content: space-between;
+      img{
+        width: 100%;
+      }
+      &_block{
+        display: flex;
+        flex-direction: column;
+        &_text{
+          border-radius: 10px;
+          width: 288px;
+          height: 44px;
+          background: #fff;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: .7s;
+          position: relative;
+          bottom: 53px;
+          left: 5px;
+        }
+        &_text:hover{
+          color: #d41717;
+          transition: .7s;
+        }
+      }
+    }
+    &_row2{
+      display: grid;
+      grid-template-columns: 32% 32% 32%;
+      justify-content: space-between;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+@media (max-width:1440px) {
+  .weInstall{
+    &_wrapper{
+      gap: 0;
+      &_row1{
+        &_block{
+          &_text{
+            width: 260px;
+            height: 44px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .weInstall{
+    &_wrapper{
+      &_row1{
+        &_block{
+          &_text{
+            width: 200px;
+            height: 35px;
+            bottom: 42px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .weInstall{
+    &_wrapper{
+      img{
+        width: 100%;
+        height: 380px;
+      }
+      &_row1{
+        display: flex;
+        flex-direction: column;
+        &_block{
+          &_text{
+            width: 40%;
+            height: 44px;
+            bottom: 53px;
+            left: 5px;
+          }
+          &_text:hover{
+            color: #020000;
+          }
+        }
+
+      }
+      &_row2{
+        display: flex;
+        flex-direction: column;
+
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .weInstall{
+    &_wrapper{
+      img{
+        height: 280px;
+      }
+      &_row1{
+        &_block{
+          &_text{
+            width: 50%;
+            height: 44px;
+            bottom: 53px;
+            left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .weInstall{
+    &_wrapper{
+      img{
+        height: 190px;
+      }
+      &_row1{
+        &_block{
+          &_text{
+            width: 60%;
+            height: 30px;
+            bottom: 34px;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
