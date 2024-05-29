@@ -1,0 +1,64 @@
+.prices{
+  margin-top: 80px;
+  &_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+    &_window{
+      display: grid;
+      grid-template-columns: 32% 32% 32%;
+      grid-template-rows: 1fr 1fr;
+      width: 100%;
+      justify-content: space-between;
+      &_window{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 60px;
+        &_text{
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+          align-items: center;
+          &_prise{
+            width: 100%;
+            height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border-radius: 20px ;
+            border: 2px solid #b40c0c;
+          }
+        }
+        img{
+          width: 100%;
+          height: 340px;
+        }
+      }
+      &_window1 {
+        &_blockdop{
+          background: url(../../img/window/image.png)  no-repeat ;
+          display: block;
+          position: absolute;
+          content: "";
+          left: 23.5%;
+          top: 142%;
+          width: 146px;
+          height: 248px;
+          background-size: contain;
+          transition: all .5s;
+          transform-origin: 0% 50% 0px;
+          transform: perspective(800px) rotateY(0deg);
+        }
+        &_blockdop:hover{
+          transform: perspective(564px) rotateY(-50deg);
+        }
+      }
+    }
+  }
+}

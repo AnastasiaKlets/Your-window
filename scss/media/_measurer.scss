@@ -1,0 +1,100 @@
+@media (max-width:1440px) {
+  .measurer{
+    &_wrapper{
+      &_form{
+        &_form{
+          gap: 20px;
+          &_icons{
+            gap: 20px;
+          }
+          &_inputs{
+            input{
+              height: 43px;
+              font-size: 13px;
+              padding-left: 13px;
+            }
+            input::placeholder{
+              font-size: 13px;
+              padding-left: 13px;
+            }
+            input.text{
+              font-size: 13px;
+            }
+          }
+          button{
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .measurer{
+    &_wrapper{
+      &_form{
+        &_form{
+          gap: 15px;
+          &_icons{
+            gap: 15px;
+          }
+          &_inputs{
+            input{
+              height: 40px;
+              font-size: 12px;
+              padding-left: 12px;
+            }
+            input::placeholder{
+              font-size: 12px;
+              padding-left: 12px;
+            }
+            input.text{
+              font-size: 12px;
+            }
+          }
+          button{
+            height: 45px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .measurer{
+    &_wrapper{
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      &_form{
+        margin: 36px;
+        button{
+          width: 76%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .measurer{
+    &_wrapper{
+      &_form{
+        margin: 26px;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .measurer{
+    &_wrapper{
+      &_form{
+        margin: 16px;
+        &_form{
+          button{
+            height: 45px;
+          }
+        }
+      }
+    }
+  }
+}
