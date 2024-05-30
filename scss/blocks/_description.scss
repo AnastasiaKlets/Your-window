@@ -1,0 +1,43 @@
+.description{
+  margin-top: 100px;
+  &_wrapper{
+    display: grid;
+    grid-template-columns: 47% 51%;
+    align-items: center;
+    justify-content: space-between;
+    &_img{
+      width: 100%;
+    }
+    &_columns{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      &_img{
+        width: 60%;
+      }
+      &_text{
+        height: 40px;
+        border-radius: 10px;
+        background: linear-gradient(111deg, #ff2626 0%, #b40c0c 100%);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        font-weight: 600;
+        font-size: 16px;
+        color: #fff;
+      }
+      &_logo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        img{
+          width: 19%;
+        }
+      }
+    }
+  }
+}

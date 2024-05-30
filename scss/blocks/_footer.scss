@@ -1,0 +1,25 @@
+.footer{
+  background: #000000;
+  &_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    align-items: center;
+    width: 100%;
+    span{
+      color: #fff;
+    }
+    &_inf{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      &_logoText{
+        display: flex;
+        gap: 35px;
+        align-items: center;
+      }
+    }
+  }
+}

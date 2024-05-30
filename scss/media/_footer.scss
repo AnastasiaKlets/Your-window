@@ -1,0 +1,25 @@
+@media (max-width: 992px) {
+  .footer{
+    &_wrapper{
+      &_inf{
+        flex-direction: column;
+        gap: 100px;
+        &_logoText{
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 20px;
+          &_svg{
+            width: 100%;
+
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 480px) {
+
+}
