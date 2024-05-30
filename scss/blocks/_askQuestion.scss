@@ -1,0 +1,10 @@
+.askQuestion{
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+  background: #fff;
+  border-radius: 10px;
+  margin-top: 100px;
+  &_wrapper{
+    display: grid;
+    grid-template-columns: 60% 40%;
+  }
+}
