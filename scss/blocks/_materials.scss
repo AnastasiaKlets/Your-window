@@ -1,0 +1,81 @@
+.materials {
+    padding-top: 114px;
+    &_wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    &_sliders {
+        width: 55%;
+    }
+    &_images {
+        position: relative;
+        display: flex;
+        justify-content: end;
+        width: 39%;
+        &_accessory {
+            position: absolute;
+            top: 25.8%;
+            left: 0;
+            width: 17.2%;
+            height: 51.5%;
+        }
+        &_profile {
+            width: 36.25%;
+            height: 100%;
+        }
+        &_bg {
+            width: 58.5%;
+            height: 100%;
+        }
+    }
+    .title_16 {
+        margin-top: 7px;
+    }
+    .title_14 {
+        margin-top: 9px;
+        width: 86.25%;
+        font-weight: 300;
+        line-height: 173%;
+        color: #909090;
+    }
+    .separate {
+        margin-top: 31px;
+    }
+    .button {
+        margin-top: 40px;
+        width: 58%;
+    }
+}
+.profiles, .accessories {
+    &_wrapper {
+        overflow: hidden;
+    }
+    &_container {
+        margin-top: 22px;
+        position: relative;
+        .rotate {
+            transform: rotate(180deg);
+        }
+    }
+    &_field {
+        display: flex;
+    }
+    &_slide {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &_prev, &_next {
+        position: absolute;
+        top: 50%;
+        transform:translate(0, -50%);
+    }
+    &_prev {
+        left: -47px;
+    }
+    &_next {
+        right: -47px;
+    }
+}

@@ -2,7 +2,6 @@
 	font-size: 20px;
 	font-weight: 500;
 	color: #000;
-	transition: 0.7s;
 	&_12 {
 		font-size: 12px;
 	}
@@ -38,17 +37,10 @@
 .bold {
 	font-weight: 700;
 }
+.upper {
+	text-transform: uppercase;
+}
 
 .gotham {
 	font-family: "GothamPro", sans-serif;
-}
-
-.titleHover:hover{
-	color: #000000;
-	transition: 0.7s;
-}
-
-.titleHover:hover{
-	color: #f31818;
-	transition: 0.7s;
 }

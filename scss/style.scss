@@ -6,8 +6,9 @@
 	padding: 0;
 	scroll-behavior: smooth;
 }
-body{
-	background: #F3F5F9;
+body {
+	box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.25);
+	background: #f3f5f9;
 }
 .container {
 	max-width: 1400px;
@@ -33,4 +34,9 @@ a {
 @import "blocks/description";
 @import "blocks/footer";
 @import "blocks/askQuestion";
+@import "blocks/consult";
+@import "blocks/features";
+@import "blocks/materials";
+@import "blocks/portfolio";
+@import "blocks/reviews";
 @import 'media/general';

@@ -6,5 +6,6 @@
   &_wrapper{
     display: grid;
     grid-template-columns: 60% 40%;
+    justify-items: center;
   }
 }

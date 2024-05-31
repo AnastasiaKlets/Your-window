@@ -1,0 +1,115 @@
+.features {
+    padding-top: 127px;
+    &_header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    &_wrapper {
+        overflow: hidden;
+        margin-top: 20px;
+    }
+    &_content {
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        width: 50%;
+        & > img {
+            position: relative;
+            left: -8.33%;
+            width: 67.66%;
+        }
+    }
+    &_slide {
+        .title_16 {
+            margin-top: 20px;
+        }
+    }
+    &_container {
+        position: relative;
+    }
+    &_field {
+        display: flex;
+    }
+    &_controls {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 53.16%;
+        margin-top: 55px;
+        .rotate {
+            transform: rotate(180deg);
+        }
+    }
+    &_counter {
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    &_map {
+        width: 55%;
+        &_image {
+            padding-top: 100%;
+            background: url('../img/profile_map.png') no-repeat 50%/cover;
+        }
+    }
+    &_bottom {
+        position: absolute;
+        right: 0;
+        bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        width: 20.19%;
+        text-align: end;
+        img {
+            width: 32%;
+        }
+    }
+    &_prev, &_next {
+        cursor: pointer;
+    }
+    &_indicators {
+        position: absolute;
+        top: 0;
+        left: 33px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 90%;
+    }
+    &_dot {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 93px;
+        height: 93px;
+        background: url('../icons/map_marker.svg') no-repeat 50%/cover;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 24px;
+        color: #fff;
+        text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        &:nth-child(1), &:nth-child(4) {
+            margin-left: 138.7%;
+        }
+        &:hover {
+            color: #747272;
+            filter: brightness(60%);
+            transition: 0.8s;
+        }
+    }
+    .button {
+        min-width: 32.58%;
+        padding: 0 43px;
+        text-transform: uppercase;
+    }
+    .mobile {
+        display: none;
+    }
+}
