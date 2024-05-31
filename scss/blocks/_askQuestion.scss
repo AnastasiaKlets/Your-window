@@ -7,5 +7,35 @@
     display: grid;
     grid-template-columns: 60% 40%;
     justify-items: center;
+    &_form{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      &_form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        button{
+          width: 75%;
+        }
+        &_inputs{
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          width: 100%;
+          &_input2{
+            height: 92px;
+          }
+        }
+      }
+    }
+    &_ImgTel{
+      display: flex;
+      &_block{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+      }
+    }
   }
 }
