@@ -1,8 +1,9 @@
 .survey {
     padding-top: 65px;
     &_wrapper {
+        position: relative;
         display: none;
-        align-items: space-between;
+        justify-content: space-between;
         margin-top: 37px;
         border-radius: 10px;
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
@@ -27,7 +28,7 @@
         justify-content: center;
         gap: 25px 3.56%;
         &_item {
-            width: 31.48%;
+            width: 36.48%;
             .title_16 {
                 margin-top: 8px;
                 text-align: center;
@@ -49,9 +50,10 @@
         }
     }
     &_form {
-        user-select: none;
         &_radio {
             position: absolute;
+            top: 20px;
+            left: 20px;
             z-index: -1;
         }
         &_img {
@@ -139,6 +141,7 @@
         &_content {
             display: flex;
             flex-direction: column;
+            align-items: center;
             gap: 15px;
         }
         &_bonuses {
@@ -173,6 +176,7 @@
             display: flex;
             justify-content: space-between;
             align-items: end;
+            width: 100%;
             img {
                 &:first-child {
                     margin: 0 0 22px 30px;
@@ -222,12 +226,14 @@
         &_social {
             width: 7.1%;
             img {
+                width: 100%;
                 border-radius: 10px;
             }
         }
+        
     }
     .title_20 {
-        width: 74.5%;
+        max-width: 74.5%;
     }
     .title_24 {
         margin-top: 19px;

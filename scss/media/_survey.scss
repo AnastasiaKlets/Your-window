@@ -1,0 +1,173 @@
+@media (max-width:1720px) {
+
+}
+@media (max-width:1600px) {
+
+}
+@media (max-width:1440px) {
+
+}
+@media (max-width: 1200px) {
+    .survey {
+        &_form {
+            &_radio:checked + &_img::before {
+                content:  url('../icons/check_m.svg');
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    .survey {
+        padding-top: 50px;
+        &_wrapper {
+            flex-direction: column;
+            gap: 19px;
+            margin-top: 18px;
+        }
+        &_content {
+            gap: 22px;
+            padding: 23px 15px;
+            width: calc(100% - 30px);
+        }
+        &_body {
+            justify-content: space-between;
+            gap: 6px 4%;
+            &_item {
+                width: 47.27%;
+                .title_16 {
+                    margin-top: 7px;
+                }
+            }
+            &_image {
+                width: 100%;
+            }
+        }
+        &_body.six {
+            .survey_body_item {
+                width: 47.27%;
+            }
+        }
+        &_form {
+            &_radio:checked + &_img::before {
+                content:  url('../icons/check.svg');
+            }
+            &_radio.bonus:checked + img {
+                margin: 0 5px;
+            }
+        }
+        &_input {
+            width: calc(100% - 30px);
+            font-size: 14px;
+            &::placeholder {
+                font-size: 14px;
+            }
+        }
+        &_bottom {
+            display: flex;
+            justify-content: center;
+            gap: 3.7%;
+            width: 100%;
+            .button {
+                width: 74%;
+            }
+            .button_back {
+                width: 22.1%;
+            }
+        }
+        &_bottom.first {
+            .button {
+                width: 90%;
+            }
+        }
+        &_banner {
+            width: calc(100% - 26px);
+            padding: 11px 13px;
+            &_content {
+                gap: 8px;
+                align-items: start;
+                .title_20 {
+                    align-self: center;
+                }
+            }
+            &_bonuses {
+                flex-direction: column;
+                align-items: start;
+                gap: 5px;
+            }
+            &_bonus {
+                gap: 11px;
+                max-width: 59%;
+                img {
+                    width: 56px;
+                    height: 56px;
+                }
+            }
+            &_name {
+                margin-top: 16px;
+                padding-left: 0;
+                max-width: 50%;
+            }
+            &_images {
+                justify-content: end;
+                img {
+                    &:first-child {
+                        display: none;
+                    }
+                    &:last-child {
+                        width: 32%;
+                    }
+                }
+            }
+            .trans {
+                text-align: start;
+            }
+        }
+        &_result {
+            &_content {
+                .button {
+                    width: 90%;
+                }
+                input {
+                    width: calc(90% - 20px);
+                }
+                .row {
+                    flex-direction: row;
+                    gap: 3%;
+                }
+            }
+            &_image {
+                display: none;
+            }
+            &_social {
+                width: 10%;
+            }
+        }
+        .title_20 {
+            max-width: 90%;
+        }
+        .title_24 {
+            margin-top: 10px;
+        }
+    }
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 480px) {
+    .survey {
+        &_banner {
+            &_images {
+                img {
+                    &:last-child {
+                        width: 44%;
+                    }
+                }
+            }
+        }
+        &_form {
+            &_radio:checked + &_img::before {
+                content:  url('../icons/check_m.svg');
+            }
+        }
+    }
+}
