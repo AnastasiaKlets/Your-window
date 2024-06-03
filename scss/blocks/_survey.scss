@@ -49,6 +49,7 @@
         }
     }
     &_form {
+        user-select: none;
         &_radio {
             position: absolute;
             z-index: -1;
@@ -79,6 +80,14 @@
             height: 100%;
             border-radius: 10px;
             background: rgba(255, 38, 38, 0.42);
+        }
+        &_radio.social:checked + img {
+            box-shadow: 0 0 10px 0 #ff2626;
+        }
+        &_radio.bonus:checked + img {
+            margin: 0 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0 #ff2626;
         }
     }
     &_input {
@@ -179,11 +188,18 @@
         &_content {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            align-items: center;
             text-align: center;
+            gap: 16px;
             .survey_banner_bonuses {
                 justify-content: center;
                 gap: 5px;
+            }
+            .button {
+                width: 54%;
+            }
+            input {
+                width: calc(54% - 32px);
             }
         }
         &_image {
@@ -194,12 +210,27 @@
                 object-fit: cover;
             }
         }
-        
-        .light {
-            color: #666;
+        &_socials {
+            display: flex;
+            justify-content: center;
+            gap: 2.5%;
+            width: 100%;
+            &:checked {
+                transform: scale(1.1)
+            }
+        }
+        &_social {
+            width: 7.1%;
+            img {
+                border-radius: 10px;
+            }
         }
     }
+    .title_20 {
+        width: 74.5%;
+    }
     .title_24 {
+        margin-top: 19px;
         text-align: center;
     }
     .rotate {
@@ -210,5 +241,8 @@
         background: linear-gradient(111deg, #ff2626 0%, #b40c0c 100%);
         background-clip: text;
         color: transparent;
+    }
+    .light {
+        color: #666;
     }
 }
