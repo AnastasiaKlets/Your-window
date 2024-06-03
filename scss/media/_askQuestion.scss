@@ -1,0 +1,34 @@
+@media (max-width: 992px) {
+  .askQuestion{
+    &_wrapper{
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 10px;
+      padding-top: 25px;
+      &_ImgTel{
+        justify-content: center;
+        &_img{
+          width: 90%;
+          position: relative;
+          left: -40px;
+        }
+        &_block{
+          top: 87%;
+          left: 55%;
+        }
+      }
+      &_form{
+        &_form{
+          button{
+            width: 100%;
+          }
+          &_inputs{
+            input{
+              width: 95%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

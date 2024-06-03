@@ -1,0 +1,86 @@
+.helpChoice{
+  margin-top: 120px;
+  background: url("../../icons/helpChoice/helpChoice.png") no-repeat;
+  background-size: cover;
+  &_wrapper{
+    padding: 50px 0 200px;
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    &_form{
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      &_title{
+        text-transform: uppercase;
+        background: linear-gradient(111deg, #ff2626 0%, #b40c0c 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      button{
+        width: 70%;
+      }
+      &_inputs{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        input{
+          width: 100%;
+          background: #d9d9d9;
+        }
+        input{
+          font-weight: 400;
+          font-size: 18px;
+          color: #909090;
+        }
+      }
+      &_text{
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+      &_check{
+        .checkbox {
+          position: absolute;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+        }
+        .checkbox-label {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          font-size: 18px;
+        }
+        .checkbox-view {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 24px;
+          height: 24px;
+          margin-right: 10px;
+          border: 1px solid #ccc;
+          border-radius: 6px;
+          background: #fff;
+          transition: .3s;
+        }
+        .checkbox-icon {
+          opacity: 0;
+          transition: .3s;
+        }
+        .checkbox:checked + .checkbox-view {
+          background-color: #B40C0C;
+        }
+        .checkbox:checked + .checkbox-view .checkbox-icon {
+          opacity: 1;
+        }
+        label{
+          display: flex;
+          gap: 5px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

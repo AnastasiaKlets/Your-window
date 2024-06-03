@@ -1,5 +1,6 @@
 .prices{
   margin-top: 80px;
+  position: relative;
   &_wrapper{
     display: flex;
     flex-direction: column;
@@ -46,8 +47,8 @@
           display: block;
           position: absolute;
           content: "";
-          left: 23.5%;
-          top: 142%;
+          left: 17.5%;
+          top: 7.5%;
           width: 146px;
           height: 248px;
           background-size: contain;
