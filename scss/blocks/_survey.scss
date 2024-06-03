@@ -21,9 +21,6 @@
         padding: 35px;
         width: calc(58.45% - 70px);
     }
-    &_banner {
-        width: 40.86%;
-    }
     &_body {
         display: flex;
         flex-wrap: wrap;
@@ -126,6 +123,7 @@
     }
     &_banner {
         position: relative;
+        width: 40.86%;
         padding: 33px 9px;
         border-radius: 10px;
         background-color: #e9e3e5;
@@ -176,11 +174,29 @@
                 }
             }
         }
-        .trans {
-            line-height: 156%;
-            background: linear-gradient(111deg, #ff2626 0%, #b40c0c 100%);
-            background-clip: text;
-            color: transparent;
+    }
+    &_result {
+        &_content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            .survey_banner_bonuses {
+                justify-content: center;
+                gap: 5px;
+            }
+        }
+        &_image {
+            width: 40.86%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        
+        .light {
+            color: #666;
         }
     }
     .title_24 {
@@ -188,5 +204,11 @@
     }
     .rotate {
         transform: rotate(180deg);
+    }
+    .trans {
+        line-height: 156%;
+        background: linear-gradient(111deg, #ff2626 0%, #b40c0c 100%);
+        background-clip: text;
+        color: transparent;
     }
 }
