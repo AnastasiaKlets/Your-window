@@ -1,0 +1,254 @@
+.survey {
+    padding-top: 65px;
+    &_wrapper {
+        position: relative;
+        display: none;
+        justify-content: space-between;
+        margin-top: 37px;
+        border-radius: 10px;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+        background: #fff;
+        &:first-child {
+            display: flex;
+        }
+        .title_20 {
+            text-align: center;
+        }
+    }
+    &_content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 35px;
+        width: calc(58.45% - 70px);
+    }
+    &_body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px 3.56%;
+        &_item {
+            width: 36.48%;
+            .title_16 {
+                margin-top: 8px;
+                text-align: center;
+            }
+        }
+        &_image {
+            width: 71.72%;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+        }
+    }
+    &_body.six {
+        .survey_body_item {
+            width: 27%;
+        }
+    }
+    &_form {
+        &_radio {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: -1;
+        }
+        &_img {
+            position: relative;
+            padding: 33.37% 0;
+            width: 100%;
+            img, &_img::before {
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+            }
+        }
+        &_radio:checked + &_img::before {
+            content:  url('../icons/check.svg');
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            background: rgba(255, 38, 38, 0.42);
+        }
+        &_radio.social:checked + img {
+            box-shadow: 0 0 10px 0 #ff2626;
+        }
+        &_radio.bonus:checked + img {
+            margin: 0 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0 #ff2626;
+        }
+    }
+    &_input {
+        width: calc(71.72% - 32px);
+        height: 15px;
+        padding: 16px;
+        border: 1px solid #909090;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #000;
+        outline: none;
+        &::placeholder {
+            font-weight: 500;
+            font-size: 16px;
+            color: #000;
+        }
+    }
+    &_body.six{
+        .survey_form_img {
+            padding: 39.24% 0;
+        }
+    }
+    &_bottom {
+        display: flex;
+        justify-content: center;
+        gap: 3.7%;
+        width: 72.16%;
+        margin: 0 auto;
+        .button {
+            width: 54%;
+        }
+        .button_back {
+            width: 15.3%;
+            img {
+                width: 61%;
+            }
+        }
+    }
+    &_bottom.first {
+        width: 100%;
+    }
+    &_banner {
+        position: relative;
+        width: 40.86%;
+        padding: 33px 9px;
+        border-radius: 10px;
+        background-color: #e9e3e5;
+        &_content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        &_bonuses {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .title {
+            text-align: center;
+        }
+        &_bonus {
+            display: flex;
+            align-items: center;
+            img {
+                height: 77px;
+            }
+            .title {
+                text-align: start;
+            }
+        }
+        &_name {
+            margin-top: 105px;
+            padding-left: 13%;
+            max-width: 38%;
+            .title {
+                text-align: start;
+            }
+        }
+        &_images {
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            width: 100%;
+            img {
+                &:first-child {
+                    margin: 0 0 22px 30px;
+                    width: 33%;
+                }
+                &:last-child {
+                    width: 66%;
+                }
+            }
+        }
+    }
+    &_result {
+        &_content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 16px;
+            .survey_banner_bonuses {
+                justify-content: center;
+                gap: 5px;
+            }
+            .button {
+                width: 54%;
+            }
+            input {
+                width: calc(54% - 32px);
+            }
+        }
+        &_image {
+            width: 40.86%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &_socials {
+            display: flex;
+            justify-content: center;
+            gap: 2.5%;
+            width: 100%;
+            &:checked {
+                transform: scale(1.1)
+            }
+        }
+        &_social {
+            width: 7.1%;
+            img {
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+        
+    }
+    .title_20 {
+        max-width: 74.5%;
+    }
+    .title_24 {
+        margin-top: 19px;
+        text-align: center;
+    }
+    .rotate {
+        transform: rotate(180deg);
+    }
+    .trans {
+        line-height: 156%;
+        background: linear-gradient(111deg, #ff2626 0%, #b40c0c 100%);
+        background-clip: text;
+        color: transparent;
+    }
+    .light {
+        color: #666;
+    }
+}
