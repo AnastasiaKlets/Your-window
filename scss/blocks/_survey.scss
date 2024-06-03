@@ -36,6 +36,15 @@
                 text-align: center;
             }
         }
+        &_image {
+            width: 71.72%;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+        }
     }
     &_body.six {
         .survey_body_item {
@@ -73,6 +82,22 @@
             height: 100%;
             border-radius: 10px;
             background: rgba(255, 38, 38, 0.42);
+        }
+    }
+    &_input {
+        width: calc(71.72% - 32px);
+        height: 15px;
+        padding: 16px;
+        border: 1px solid #909090;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #000;
+        outline: none;
+        &::placeholder {
+            font-weight: 500;
+            font-size: 16px;
+            color: #000;
         }
     }
     &_body.six{
