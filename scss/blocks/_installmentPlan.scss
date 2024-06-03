@@ -1,0 +1,91 @@
+.installmentPlan{
+  position: relative;
+  margin-top: 280px;
+  &_wrapper{
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &_center{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px 0 25px;
+    }
+    &_title{
+      font-weight: 700;
+      font-size: 64px;
+      text-transform: uppercase;
+      background: linear-gradient(111deg, #ff2626 0%, #b40c0c 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &_text{
+      &_red{
+        font-size: 40px;
+        background: linear-gradient(111deg, #ff2626 0%, #b40c0c 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    &_textRed{
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+      background: linear-gradient(111deg, #ff2626 0%, #b40c0c 100%);
+      border-radius: 10px;
+      width: 558px;
+      height: 42px;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &_win{
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    width: 25%;
+  }
+  &_0{
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+    width: 20%;
+  }
+  &_form{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 11px;
+    &_dop{
+      width: 70%;
+    }
+    &_form{
+      display: grid;
+      grid-template-columns: 74% 24%;
+      justify-content: space-between;
+      margin-top: 10px;
+      &_inputs{
+        display: grid;
+        grid-template-columns: 32% 32% 32%;
+        justify-content: space-between;
+        &_input{
+          width: 100%;
+          background: #d9d9d9;
+          border-radius: 5px;
+          height: 35px;
+        }
+        input::placeholder{
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.7);
+          margin-left: 10px;
+        }
+
+      }
+    }
+  }
+}
