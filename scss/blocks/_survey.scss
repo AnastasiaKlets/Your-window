@@ -37,6 +37,11 @@
             }
         }
     }
+    &_body.six {
+        .survey_body_item {
+            width: 27%;
+        }
+    }
     &_form {
         &_radio {
             position: absolute;
@@ -55,9 +60,6 @@
                 height: 100%;
                 border-radius: 10px;
             }
-            img {
-                object-fit: cover;
-            }
         }
         &_radio:checked + &_img::before {
             content:  url('../icons/check.svg');
@@ -73,19 +75,28 @@
             background: rgba(255, 38, 38, 0.42);
         }
     }
+    &_body.six{
+        .survey_form_img {
+            padding: 39.24% 0;
+        }
+    }
     &_bottom {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 3.7%;
         width: 72.16%;
+        margin: 0 auto;
         .button {
             width: 54%;
         }
         .button_back {
             width: 15.3%;
+            img {
+                width: 61%;
+            }
         }
     }
     &_bottom.first {
-        justify-content: center;
         width: 100%;
     }
     &_banner {
@@ -149,5 +160,8 @@
     }
     .title_24 {
         text-align: center;
+    }
+    .rotate {
+        transform: rotate(180deg);
     }
 }
