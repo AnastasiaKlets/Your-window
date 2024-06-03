@@ -1,3 +1,37 @@
+@media (max-width: 1250px) {
+  .accessories{
+    &_wrapper{
+      &_blocks{
+        &_block{
+          &_invisible{
+            width: calc(80% - 20px);
+            padding: 10px;
+            gap: 5px;
+            top: 5%;
+            left: 10%;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1070px) {
+  .accessories{
+    &_wrapper{
+      &_blocks{
+        &_block{
+          &_invisible{
+            width: calc(90% - 10px);
+            padding: 5px;
+            gap: 5px;
+            top: 5%;
+            left: 5%;
+          }
+        }
+      }
+    }
+  }
+}
 @media (max-width: 992px) {
   .accessories{
     margin-top: 70px;
