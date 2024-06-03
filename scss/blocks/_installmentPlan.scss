@@ -61,6 +61,9 @@
     flex-direction: column;
     margin-top: 20px;
     gap: 11px;
+    button{
+      height: 35px;
+    }
     &_dop{
       width: 70%;
     }
@@ -69,6 +72,7 @@
       grid-template-columns: 74% 24%;
       justify-content: space-between;
       margin-top: 10px;
+      align-items: center;
       &_inputs{
         display: grid;
         grid-template-columns: 32% 32% 32%;
@@ -79,6 +83,7 @@
           border-radius: 5px;
           height: 35px;
         }
+
         input::placeholder{
           font-size: 14px;
           color: rgba(0, 0, 0, 0.7);
