@@ -1,4 +1,4 @@
-.consult, .thanks {
+.consult, .thanks, .voluminous {
     position: relative;
     display: none;
     position: fixed;
@@ -118,10 +118,10 @@
         display: none;
     }
 }
-.consult.show, .thanks.show {
+.consult.show, .thanks.show, .voluminous.show {
     animation: fadeIn 1s;
 }
-.consult.hide, .thanks.hide {
+.consult.hide, .thanks.hide, .voluminous.hide {
     animation: fadeOut 1s;
 }
 .thanks {

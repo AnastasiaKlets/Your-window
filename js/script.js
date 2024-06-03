@@ -320,6 +320,9 @@ if (document.querySelector('.consult') != null) {
     modal('[data-modal]', 'data-close', '.consult');
     modal('[data-thanks]', 'data-close', '.thanks');
 }
+if (document.querySelector('.voluminous') != null) {
+    modal('[data-voluminous]', 'data-close', '.voluminous');
+}
 
 document.querySelector('.consult_form').addEventListener('submit', (e) => {
     e.preventDefault();
