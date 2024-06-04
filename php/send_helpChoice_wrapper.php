@@ -5,17 +5,8 @@ $chat_id = "-4231472135";
 
 $phone = ($_POST['phone']);
 $theme = ($_POST['theme']);
-$contact = ($_POST['contact']);
+$name = ($_POST['name']);
 
-$locations = ($_POST['locations']);
-$types = ($_POST['types']);
-
-$height = ($_POST['height']);
-$width = ($_POST['width']);
-$count = ($_POST['count']);
-
-$parameters = ($_POST['parameters']);
-$bonus=($_POST['bonus']);
 
 $utm_source = $_POST['utm_source'];
 $utm_medium = $_POST['utm_medium'];
@@ -27,17 +18,7 @@ $arr = array(
     'Сайт:' => 'https://yokna.by/',
     'Тема:' => $theme,
     'Телефон:' => $phone,
-    'Мессенджер:' => $contact,
-    '' => '',
-    'Ответы на вопросы:' => ' ',
-    '1. Куда устанавливаете окна?' => $locations,
-    '2. Выберите необходимый тип окон (один или несколько):' =>  implode(", ", $types),
-    'Размеры окна:' => ' ',
-    '3. Высота' => $height,
-    '4. Ширина' => $width,
-    '5. Количество створок' => $count,
-    '6. Выберите необходимый тип окон:' => implode(", ", $parameters),
-    '7. Подарок' => $bonus,
+    'Имя:' => $name,
     '' => '',
     'UTM метки' => '',
     'utm_source:' => $utm_source,

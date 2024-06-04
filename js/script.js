@@ -1,3 +1,16 @@
+let baseUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+let newUrl = baseUrl + '?utm_source=yandex&utm_medium=cpc&utm_campaign=%7Bcampaign_name_lat%7D&utm_content=%7Bad_id%7D&utm_term=%7Bkeyword%7D';
+history.pushState(null, null, newUrl);
+
+let utms_names = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+
+utms_names.forEach(name => {
+    let utm_inputs = document.querySelectorAll(`.${name}`);
+    utm_inputs.forEach(input => {
+        input.value = new URL(window.location.href).searchParams.get(`${name}`);
+    });
+});
+
 let prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
@@ -441,7 +454,11 @@ survey_buttons.forEach(button => {
 $("form").submit(function (event) {
     event.preventDefault();
     let name = event.target.classList.value.slice(0, -5);
+    console.log(name)
     let formData = new FormData(document.querySelector(`.${name}_form`));
+    for(let [name, value] of formData) {
+        console.log(`${name} = ${value}`); // key1=value1, потом key2=value2
+    }
     sendPhp(name, formData);
 });
 
@@ -456,7 +473,7 @@ function sendPhp(name, data) {
         contentType: false,
         success: function (data) {
             $(`.${name}_form`).trigger('reset');
-            if (name != 'survey') {
+            if (name == 'consult') {
                 closeModal(`.${name}`)
             }
             openModal('.thanks');

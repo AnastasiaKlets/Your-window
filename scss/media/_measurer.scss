@@ -24,6 +24,9 @@
           button{
             height: 50px;
           }
+          .survey_result_social {
+            width: auto;
+          }
         }
       }
     }
@@ -55,6 +58,9 @@
           button{
             height: 45px;
           }
+          .survey_result_social {
+            width: auto;
+          }
         }
       }
     }
@@ -71,6 +77,9 @@
         button{
           width: 76%;
         }
+        .survey_result_social {
+          width: auto;
+        }
       }
     }
   }
@@ -80,6 +89,9 @@
     &_wrapper{
       &_form{
         margin: 26px;
+        .survey_result_social {
+          width: auto;
+        }
       }
     }
   }
@@ -93,6 +105,9 @@
           button{
             height: 45px;
           }
+        }
+        .survey_result_social {
+          width: auto;
         }
       }
     }

@@ -2,11 +2,41 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Окна</title>
+	<title>ЮОКНА</title>
+	<link rel="icon" type="image/x-icon" href="/icons/favicon.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="scss/jquery.fancybox.min.css">
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript" >
+		(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+			m[i].l=1*new Date();
+			for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+			k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+		(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+		ym(97475512, "init", {
+			clickmap:true,
+			trackLinks:true,
+			accurateTrackBounce:true,
+			webvisor:true
+		});
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/97475512" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-M3NP5MWG');</script>
+	<!-- End Google Tag Manager -->
 </head>
 <body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M3NP5MWG"
+					  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 	<header class="header" id="header">
 		<div class="container">
 			<div class="header_wrapper">
@@ -48,7 +78,7 @@
 							</a>
 						</div>
 					</div>
-					<button class="button title header_wrapper_block_btn">
+					<button data-modal class="button title header_wrapper_block_btn">
 						Заказать замер
 					</button>
 					<div class="menu">
@@ -87,7 +117,7 @@
 								</div>
 							<li>
 							<li>
-								<button class="button title  menu_header_wrapper_block_btn">
+								<button data-modal class="button title  menu_header_wrapper_block_btn">
 									Заказать замер
 								</button>
 							<li>
@@ -122,7 +152,7 @@
 										<span class="title title_24">
 											которые преображают ваш дом: выбирайте качество и надежность с нами!
 										</span>
-										<button class="button title title_24">Заказать замер</button>
+										<button data-modal class="button title title_24">Заказать замер</button>
 										<div class="secondanimation_wrapper_block_img">
 											<img src="icons/banner/Group%2012719.png" alt="">
 											<img src="icons/banner/image%2085.png" alt="">
@@ -167,7 +197,7 @@
 												</span>
 											</div>
 										</div>
-										<button class="button title_24">Заказать замер</button>
+										<button data-modal class="button title_24">Заказать замер</button>
 									</div>
 									<div class="firstanimation_wrapper_block2">
 										<div class="firstanimation_wrapper_block2_circles">
@@ -532,7 +562,7 @@
 						<input type="hidden" name="utm_campaign" class="utm_campaign" value="">
 						<input type="hidden" name="utm_content" class="utm_content" value="">
 						<input type="hidden" name="utm_term" class="utm_term" value="">
-						<button class="button" type="submit">Отправить</button>
+						<button class="button" type="submit" onclick="ym(97475512,'reachGoal','quiz')">Отправить</button>
 						<div class="title title_16 trans">Выберите Ваш подарок:</div>
 						<div class="survey_banner_bonuses row">
 							<label for="survey_form_radio_5-5" class="survey_banner_bonus">
@@ -613,12 +643,31 @@
 							Куда Вам позвонить?
 						</span>
 						<div class="measurer_wrapper_form_form_icons">
-							<img src="img/measurer/phone.svg" alt="phone">
-							<img src="img/measurer/viber.svg" alt="viber">
-							<img src="img/measurer/telegram.svg" alt="telegram">
-							<img src="img/measurer/whatsapp.svg" alt="whatsapp">
+							<label for="measurer_form_radio_5-1" class="survey_result_social">
+								<input type="radio" name="contact" id="measurer_form_radio_5-1" class="survey_form_radio social" value="Звонок" required>
+								<img src="img/measurer/phone.svg" alt="call">
+							</label>
+							<label for="measurer_form_radio_5-2" class="survey_result_social">
+								<input type="radio" name="contact" id="measurer_form_radio_5-2" class="survey_form_radio social" value="Viber" required>
+								<img src="icons/viber_s.svg" alt="viber">
+							</label>
+							<label for="measurer_form_radio_5-3" class="survey_result_social">
+								<input type="radio" name="contact" id="measurer_form_radio_5-3" class="survey_form_radio social" value="Telegram" required>
+								<img src="icons/teleg_s.svg" alt="telegram">
+							</label>
+							<label for="measurer_form_radio_5-4" class="survey_result_social">
+								<input type="radio" name="contact" id="measurer_form_radio_5-4" class="survey_form_radio social" value="WhatsApp" required>
+								<img src="icons/whats_s.svg" alt="whatsapp">
+							</label>
 						</div>
 						<div class="measurer_wrapper_form_form_inputs">
+							<input type="hidden" name="theme" value="Заявка">
+							<input type="hidden" name="utm_city" class="utm_city" value="">
+							<input type="hidden" name="utm_source" class="utm_source" value="">
+							<input type="hidden" name="utm_medium" class="utm_medium" value="">
+							<input type="hidden" name="utm_campaign" class="utm_campaign" value="">
+							<input type="hidden" name="utm_content" class="utm_content" value="">
+							<input type="hidden" name="utm_term" class="utm_term" value="">
 							<input type="text" name="phone" placeholder="Номер телефона" class="consult_form_input" required>
 						</div>
 						<button type="submit" class="button title_24">
@@ -665,14 +714,13 @@
 							<span class=" prices_wrapper_window_window_text_prise title">от <b class="title title_38">650 BYN</b></span>
 						</div>
 					</div>
-					<div class="prices_wrapper_window_window4 prices_wrapper_window_window">
-						<div class="prices_wrapper_window_window4_block">
-							<img src="img/window/Frame%2078.png" alt="">
+					<div class=" prices_wrapper_window_window">
+						<div class="prices_wrapper_window_window1_block">
+							<img src="img/window/Frame1.png" alt="">
 						</div>
-						<span class="prices_wrapper_window_window4_blockdop"></span>
 						<div class="prices_wrapper_window_window_text">
-							<span class="title">Четырехстворчатое окно</span>
-							<span class=" prices_wrapper_window_window_text_prise title">от <b class="title title_38">950 BYN</b></span>
+							<span class="title">Глухое окно</span>
+							<span class=" prices_wrapper_window_window_text_prise title">от <b class="title title_38">200 BYN</b></span>
 						</div>
 					</div>
 					<div class="prices_wrapper_window_window5 prices_wrapper_window_window">
@@ -685,13 +733,15 @@
 							<span class=" prices_wrapper_window_window_text_prise title">от <b class="title title_38">650 BYN</b></span>
 						</div>
 					</div>
-					<div class=" prices_wrapper_window_window">
-						<div class="prices_wrapper_window_window1_block">
-							<img src="img/window/Frame1.png" alt="">
+					<div class="prices_wrapper_window_window4 prices_wrapper_window_window">
+						<div class="prices_wrapper_window_window4_block">
+							<img src="img/window/Frame%2078.png" alt="">
 						</div>
+						<span class="prices_wrapper_window_window4_blockdop"></span>
+						<span class="prices_wrapper_window_window6_blockdop"></span>
 						<div class="prices_wrapper_window_window_text">
-							<span class="title">Глухое окно</span>
-							<span class=" prices_wrapper_window_window_text_prise title">от <b class="title title_38">200 BYN</b></span>
+							<span class="title">Четырехстворчатое окно</span>
+							<span class=" prices_wrapper_window_window_text_prise title">от <b class="title title_38">950 BYN</b></span>
 						</div>
 					</div>
 
@@ -723,8 +773,15 @@
 						<input type="number" name="count" placeholder="Количество окон" class="installmentPlan_form_form_inputs_input" required>
 						<input type="number" name="time" placeholder="Срок рассрочки" class="installmentPlan_form_form_inputs_input" required>
 						<input type="number" name="number" placeholder="Номер телефона" class="installmentPlan_form_form_inputs_input" required>
+						<input type="hidden" name="theme" value="Заявка">
+						<input type="hidden" name="utm_city" class="utm_city" value="">
+						<input type="hidden" name="utm_source" class="utm_source" value="">
+						<input type="hidden" name="utm_medium" class="utm_medium" value="">
+						<input type="hidden" name="utm_campaign" class="utm_campaign" value="">
+						<input type="hidden" name="utm_content" class="utm_content" value="">
+						<input type="hidden" name="utm_term" class="utm_term" value="">
 					</div>
-					<button type="submit" class="button title_24">
+					<button type="submit" onclick="ym(97475512,'reachGoal','form-sent')" class="button title_24">
 						Узнать сумму
 					</button>
 				</form>
@@ -1054,7 +1111,14 @@
 					</span>
 					<div class="measurer_wrapper_form_form_inputs helpChoice_wrapper_form_inputs">
 						<input type="text" name="phone" placeholder="Введите имя" class="askQuestion_wrapper_form_form_inputs_input" required>
-						<input type="text" name="message" placeholder="+375 (29) ___ __ __" class="askQuestion_wrapper_form_form_inputs_input2" required>
+						<input type="number" name="message" placeholder="+375 (29) ___ __ __" class="askQuestion_wrapper_form_form_inputs_input2" required>
+						<input type="hidden" name="theme" value="Заявка">
+						<input type="hidden" name="utm_city" class="utm_city" value="">
+						<input type="hidden" name="utm_source" class="utm_source" value="">
+						<input type="hidden" name="utm_medium" class="utm_medium" value="">
+						<input type="hidden" name="utm_campaign" class="utm_campaign" value="">
+						<input type="hidden" name="utm_content" class="utm_content" value="">
+						<input type="hidden" name="utm_term" class="utm_term" value="">
 					</div>
 					<div class="helpChoice_wrapper_form_check">
 						<label for="checkbox" class="checkbox-label title title_18" style="color: #909090;">
@@ -1327,22 +1391,31 @@
 					</div>
 				</div>
 				<div class="askQuestion_wrapper_form">
-					<form class="measurer_wrapper_form_form askQuestion_wrapper_form_form" action="#">
+					<form class="askQuestion_form" action="#" style="width: 100%">
+						<div class="measurer_wrapper_form_form askQuestion_wrapper_form_form">
 						<span class="title title_32 semi-bold ">
 							Остались вопросы?
 						</span>
-						<span class="title title_24">
+							<span class="title title_24">
 							Задайте вопрос
 							<br>
 							и мы перезвоним Вам
 						</span>
-						<div class="measurer_wrapper_form_form_inputs askQuestion_wrapper_form_form_inputs">
-							<input type="text" name="phone" placeholder="Введите номер телефона" class="askQuestion_wrapper_form_form_inputs_input" required>
-							<input type="text" name="message" placeholder="Введите сообщение" class="askQuestion_wrapper_form_form_inputs_input2" required>
+							<div class="measurer_wrapper_form_form_inputs askQuestion_wrapper_form_form_inputs">
+								<input type="text" name="phone" placeholder="Введите номер телефона" class="askQuestion_wrapper_form_form_inputs_input" required>
+								<input type="text" name="message" placeholder="Введите сообщение" class="askQuestion_wrapper_form_form_inputs_input2" required>
+								<input type="hidden" name="theme" value="Заявка c вопросом">
+								<input type="hidden" name="utm_city" class="utm_city" value="">
+								<input type="hidden" name="utm_source" class="utm_source" value="">
+								<input type="hidden" name="utm_medium" class="utm_medium" value="">
+								<input type="hidden" name="utm_campaign" class="utm_campaign" value="">
+								<input type="hidden" name="utm_content" class="utm_content" value="">
+								<input type="hidden" name="utm_term" class="utm_term" value="">
+							</div>
+							<button type="submit" onclick="ym(97475512,'reachGoal','form-sent')" class="button title_24">
+								Вызвать замерщика
+							</button>
 						</div>
-						<button type="submit" class="button title_24">
-							Вызвать замерщика
-						</button>
 					</form>
 				</div>
 			</div>
@@ -1447,14 +1520,21 @@
 				<div class="title title_20 normal">Введите ваш номер телефона и мы Вам перезвоним в течение 10 минут</div>
 				<form class="consult_form" action="#">
 					<input type="text" name="phone" placeholder="Ваш номер телефона" class="consult_form_input" required>
-					<button type="submit" class="button">Отправить</button>
+					<input type="hidden" name="theme" value="Заявка">
+					<input type="hidden" name="utm_city" class="utm_city" value="">
+					<input type="hidden" name="utm_source" class="utm_source" value="">
+					<input type="hidden" name="utm_medium" class="utm_medium" value="">
+					<input type="hidden" name="utm_campaign" class="utm_campaign" value="">
+					<input type="hidden" name="utm_content" class="utm_content" value="">
+					<input type="hidden" name="utm_term" class="utm_term" value="">
+					<button type="submit" onclick="ym(97475512,'reachGoal','form-sent')" class="button">Отправить</button>
 					<div class="consult_form_bottom">
 						<label for="consult_form_checkbox" class="consult_form_label title title_14 normal">
 							<input type="checkbox" name="checkbox" id="consult_form_checkbox" class="consult_form_checkbox" required checked>
 							<span class="consult_form_view">
                                 <img class="consult_form_icon" src="icons/policy.svg" alt="box">
                             </span>
-							Вы соглашаетесь с условиями обработки персональных данных
+							Вы соглашаетесь с условиями обработки персональных данных
 						</label>
 					</div>
 				</form>
@@ -1495,7 +1575,8 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/script.js"></script>
 	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>

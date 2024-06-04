@@ -1,6 +1,7 @@
 .measurer{
   margin-top: 80px;
   &_wrapper{
+    position: relative;
     display: grid;
     grid-template-columns: 40% 59%;
     justify-items: stretch;
@@ -71,6 +72,9 @@
         button{
           width: 70%;
           height: 54px;
+        }
+        .survey_result_social {
+          width: auto;
         }
       }
     }
