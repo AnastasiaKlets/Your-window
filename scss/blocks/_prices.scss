@@ -13,6 +13,7 @@
       grid-template-rows: 1fr 1fr;
       width: 100%;
       justify-content: space-between;
+      position: relative;
       &_window{
         display: flex;
         flex-direction: column;
@@ -47,10 +48,67 @@
           display: block;
           position: absolute;
           content: "";
-          left: 17.5%;
-          top: 7.5%;
+          left: 12.5%;
+          top: 2.5%;
           width: 146px;
           height: 248px;
+          background-size: contain;
+          transition: all .5s;
+          transform-origin: 0 50% 0;
+          transform: perspective(800px) rotateY(0deg);
+        }
+        &_blockdop:hover{
+          transform: perspective(564px) rotateY(-50deg);
+        }
+      }
+      &_window2 {
+        &_blockdop{
+          background: url(../../img/window/image.png)  no-repeat ;
+          display: block;
+          position: absolute;
+          content: "";
+          left: 42.2%;
+          top: 2.5%;
+          width: 146px;
+          height: 248px;
+          background-size: contain;
+          transition: all .5s;
+          transform-origin: 0 50% 0;
+          transform: perspective(800px) rotateY(0deg);
+        }
+        &_blockdop:hover{
+          transform: perspective(564px) rotateY(-50deg);
+        }
+      }
+      &_window3 {
+        &_blockdop{
+          background: url(../../img/window/image.png)  no-repeat ;
+          display: block;
+          position: absolute;
+          content: "";
+          left: 80.3%;
+          top: 2.5%;
+          width: 146px;
+          height: 248px;
+          background-size: contain;
+          transition: all .5s;
+          transform-origin: 0 50% 0;
+          transform: perspective(800px) rotateY(0deg);
+        }
+        &_blockdop:hover{
+          transform: perspective(564px) rotateY(-50deg);
+        }
+      }
+      &_window4 {
+        &_blockdop{
+          background: url(../../img/window/image.png)  no-repeat ;
+          display: block;
+          position: absolute;
+          content: "";
+          left: 40.2%;
+          top: 52.5%;
+          width: 103px;
+          height: 174px;
           background-size: contain;
           transition: all .5s;
           transform-origin: 0 50% 0;
