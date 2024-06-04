@@ -437,3 +437,33 @@ survey_buttons.forEach(button => {
         document.querySelector(`#${next}`).style.display = 'flex';
     });
 });
+
+$("form").submit(function (event) {
+    event.preventDefault();
+    let name = event.target.classList.value.slice(0, -5);
+    let formData = new FormData(document.querySelector(`.${name}_form`));
+    sendPhp(name, formData);
+});
+
+function sendPhp(name, data) {
+    $.ajax({
+        url: `./php/send_${name}.php`,
+        type: 'POST',
+        cache: false,
+        data: data,
+        dataType: 'html',
+        processData: false,
+        contentType: false,
+        success: function (data) {
+            $(`.${name}_form`).trigger('reset');
+            if (name != 'survey') {
+                closeModal(`.${name}`)
+            }
+            openModal('.thanks');
+            setTimeout(function(){
+                closeModal('.thanks');
+                location="#promo";
+            }, 15000)
+        }
+    });
+}

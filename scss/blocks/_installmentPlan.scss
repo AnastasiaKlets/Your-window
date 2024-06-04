@@ -46,7 +46,7 @@
     position: absolute;
     left: 0;
     bottom: 50px;
-    width: 25%;
+    width: 22%;
   }
   &_0{
     position: absolute;
@@ -69,27 +69,38 @@
     }
     &_form{
       display: grid;
-      grid-template-columns: 74% 24%;
-      justify-content: space-between;
+      grid-template-columns: 69% 24%;
+      justify-content: start;
       margin-top: 10px;
       align-items: center;
+      gap: 10px;
       &_inputs{
         display: grid;
         grid-template-columns: 32% 32% 32%;
         justify-content: space-between;
         &_input{
-          width: 100%;
+          width: 95%;
           background: #d9d9d9;
           border-radius: 5px;
           height: 35px;
         }
-
+        input{
+          padding-left: 14px;
+          border: none;
+        }
         input::placeholder{
+          font-weight: 400;
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.44);
+        }
+        input.text{
+          font-weight: 400;
           font-size: 14px;
           color: rgba(0, 0, 0, 0.7);
-          margin-left: 10px;
         }
-
+        input:focus{
+          box-shadow: 0 0 10px 0 #ff2626;
+        }
       }
     }
   }
