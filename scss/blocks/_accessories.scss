@@ -24,6 +24,7 @@
          padding-bottom: 24px;
          position: relative;
          width: 100%;
+         transition: .8s;
          &_visible{
            position: relative;
            width: 100%;
@@ -41,20 +42,21 @@
              display: flex;
              align-items: center;
              padding: 0 10px;
+             transition: .8s;
            }
          }
          &_invisible{
            position: absolute;
            background: rgba(255, 255, 255, 0.86);
-           width: calc(80% - 30px);
+           width: calc(86% - 30px);
            height: fit-content;
            border-radius: 10px;
            padding: 15px;
-           gap: 10px;
+           gap: 5px;
            flex-direction: column;
            align-items: center;
-           top: 15%;
-           left: 10%;
+           top: 10%;
+           left: 7%;
            transition: .8s;
            &_title{
              text-transform: uppercase;
@@ -71,14 +73,17 @@
 .accessories_wrapper_blocks_block .accessories_wrapper_blocks_block_invisible{
   display: none;
   transition: .8s;
+  opacity: 0;
 }
 .accessories_wrapper_blocks_block:hover .accessories_wrapper_blocks_block_invisible{
   display: flex;
   transition: .8s;
+  opacity: 1;
 }
 .accessories_wrapper_blocks_block:hover .accessories_wrapper_blocks_block_visible{
   span{
     display: none;
     transition: .8s;
+    opacity: 0;
   }
 }

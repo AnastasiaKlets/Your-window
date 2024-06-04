@@ -60,6 +60,7 @@
             position: relative;
             padding: 33.37% 0;
             width: 100%;
+            cursor: pointer;
             img, &_img::before {
                 position: absolute;
                 top:50%;
@@ -90,6 +91,13 @@
             margin: 0 15px;
             border-radius: 10px;
             box-shadow: 0 0 10px 0 #ff2626;
+            transition: .6s;
+        }
+        &_radio.bonus:hover + img {
+            margin: 0 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0 #ff2626;
+            transition: .6s;
         }
     }
     &_input {
@@ -155,6 +163,7 @@
         &_bonus {
             display: flex;
             align-items: center;
+            cursor: pointer;
             img {
                 height: 77px;
             }
@@ -225,9 +234,18 @@
         }
         &_social {
             width: 7.1%;
+            cursor: pointer;
             img {
                 width: 100%;
                 border-radius: 10px;
+                transition: .7s;
+            }
+            img:hover{
+                box-shadow: 0 0 10px 0 #ff2626;
+                background: #fff;
+                border-radius: 10px;
+                transition: .7s;
+                cursor: pointer;
             }
         }
         
