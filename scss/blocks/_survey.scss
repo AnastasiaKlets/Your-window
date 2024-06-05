@@ -1,7 +1,6 @@
 .survey {
     padding-top: 65px;
     &_wrapper {
-        position: relative;
         display: none;
         justify-content: space-between;
         margin-top: 37px;
@@ -52,8 +51,6 @@
     &_form {
         &_radio {
             position: absolute;
-            top: 20px;
-            left: 20px;
             z-index: -1;
         }
         &_img {
@@ -204,6 +201,14 @@
             }
             input {
                 width: calc(54% - 32px);
+            }
+            label {
+                position: relative;
+                input {
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
             }
         }
         &_image {
