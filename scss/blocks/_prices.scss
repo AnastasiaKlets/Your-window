@@ -41,6 +41,9 @@
           width: 100%;
           height: 340px;
         }
+        .ImgDop{
+          height: 245px;
+        }
       }
       &_window1 {
         &_blockdop{
@@ -106,6 +109,44 @@
           position: absolute;
           content: "";
           left: 40.2%;
+          top: 52.5%;
+          width: 103px;
+          height: 174px;
+          background-size: contain;
+          transition: all .5s;
+          transform-origin: 0 50% 0;
+          transform: perspective(800px) rotateY(0deg);
+        }
+        &_blockdop:hover{
+          transform: perspective(564px) rotateY(-50deg);
+        }
+      }
+      &_window5 {
+        &_blockdop{
+          background: url(../../img/window/image.png)  no-repeat ;
+          display: block;
+          position: absolute;
+          content: "";
+          left: 91.2%;
+          top: 52.5%;
+          width: 103px;
+          height: 174px;
+          background-size: contain;
+          transition: all .5s;
+          transform-origin: 0 50% 0;
+          transform: perspective(800px) rotateY(180deg) ;
+        }
+        &_blockdop:hover{
+          transform: perspective(564px) rotateY(240deg);
+        }
+      }
+      &_window6 {
+        &_blockdop{
+          background: url(../../img/window/image.png)  no-repeat ;
+          display: block;
+          position: absolute;
+          content: "";
+          left: 78.2%;
           top: 52.5%;
           width: 103px;
           height: 174px;

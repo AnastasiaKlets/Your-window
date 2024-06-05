@@ -27,12 +27,12 @@
 }
 
 #slider li.firstanimation {
-  -moz-animation:cycle 2s linear infinite;
-  -webkit-animation:cycle 2s linear infinite;
+  -moz-animation:cycle 7s linear infinite;
+  -webkit-animation:cycle 7s linear infinite;
 }
 #slider li.secondanimation {
-  -moz-animation:cycletwo 2s linear infinite;
-  -webkit-animation:cycletwo 2s linear infinite;
+  -moz-animation:cycletwo 7s linear infinite;
+  -webkit-animation:cycletwo 7s linear infinite;
 }
 
 #slider:hover li,{
@@ -91,6 +91,7 @@
       flex-direction: column;
       gap: 40px;
       margin-top: 50px;
+      margin: 50px 50px 0 50px;
       button{
         width: 60%;
         cursor: pointer;
@@ -117,7 +118,7 @@
       }
       &_circlesIn{
         display: flex;
-        gap: 35px;
+        gap: 55px;
         &_circle{
           display: flex;
           flex-direction: column;
@@ -146,7 +147,7 @@
         }
       }
       img{
-        width: 100%;
+        width: 90%;
       }
     }
   }

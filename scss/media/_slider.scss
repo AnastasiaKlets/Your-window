@@ -1,24 +1,25 @@
 @media (min-width:1440px) {
   #content-slider {
-    height:500px;
+    height:650px;
     margin-bottom: 50px;
   }
   #mask {
-    height:500px;
+    height:650px;
   }
   #slider li {
-    height: 500px;
-    top:-500px;
+    height: 650px;
+    top:-650px;
   }
 
   .firstanimation{
     &_wrapper{
+      justify-content: space-evenly;
       &_block2{
         &_circlesIn{
           gap: 46px;
         }
         img{
-          width: 98%;
+          width: 80%;
         }
       }
     }
@@ -32,7 +33,7 @@
           gap: 61px;
         }
         img{
-          width: 92%;
+          width: 80%;
         }
       }
     }
@@ -46,7 +47,7 @@
           gap: 61px;
         }
         img{
-          width: 92%;
+          width: 80%;
         }
       }
     }
@@ -60,7 +61,7 @@
           gap: 61px;
         }
         img{
-          width: 92%;
+          width: 80%;
         }
       }
     }
@@ -105,15 +106,15 @@
 }
 @media (max-width: 1200px) {
   #content-slider {
-    height:420px;
+    height:480px;
     margin-bottom: 50px;
   }
   #mask {
-    height:420px;
+    height:480px;
   }
   #slider li {
-    height: 420px;
-    top:-420px;
+    height: 480px;
+    top:-480px;
   }
   .firstanimation{
     &_wrapper{
@@ -123,7 +124,7 @@
           gap: 11px;
         }
         img{
-          width: 92%;
+          width: 80%;
         }
       }
     }
@@ -143,15 +144,15 @@
 }
 @media (max-width: 1140px) {
   #content-slider {
-    height:380px;
+    height:450px;
     margin-bottom: 50px;
   }
   #mask {
-    height:380px;
+    height:450px;
   }
   #slider li {
-    height: 380px;
-    top:-380px;
+    height: 450px;
+    top:-450px;
   }
   .firstanimation{
     &_wrapper{
@@ -170,7 +171,7 @@
           }
         }
         img{
-          width: 92%;
+          width: 80%;
         }
       }
     }
@@ -336,15 +337,16 @@
 }
 @media (max-width: 480px) {
   #content-slider {
-    height:450px;
+    height:480px;
     margin-bottom: 50px;
   }
+
   #mask {
-    height:450px;
+    height:480px;
   }
   #slider li {
-    height: 450px;
-    top:-450px;
+    height: 480px;
+    top:-480px;
   }
   .secondanimation{
     &_wrapper{
