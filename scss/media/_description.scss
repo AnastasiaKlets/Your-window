@@ -44,7 +44,17 @@
         &_logo{
           gap: 5px;
           img{
-            width: 17%;
+            width: 28%;
+          }
+          &_dop{
+            display: none;
+          }
+          &_mob{
+            display: flex;
+            justify-content: space-between;
+            img{
+              width: 40%;
+            }
           }
         }
       }

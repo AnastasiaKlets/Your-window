@@ -4,7 +4,7 @@
       padding: 8px 0 0;
       &_block{
         &_numbers{
-          gap: 2px;
+          gap: 7px;
           &_mts{
             a{
               gap: 8px;
@@ -45,11 +45,11 @@
           }
         }
         &_numbers{
-          gap: 2px;
+          gap: 7px;
           &_mts{
             display: flex;
             align-items: center;
-            gap: 2px;
+            gap: 7px;
             a{
               gap: 8px;
             }
@@ -90,7 +90,7 @@
         &_block{
           &_btn{
             width: 100%;
-            height: 30px;
+            height: 50px;
             border-radius: 10px;
             font-weight: 500;
             font-size: 14px;
