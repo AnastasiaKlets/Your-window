@@ -77,8 +77,20 @@
       gap: 10px;
       &_inputs{
         display: grid;
-        grid-template-columns: 32% 32% 32%;
-        justify-content: space-between;
+        grid-template-columns: 30% 30% 30%;
+        justify-content: space-around;
+        justify-items: center;
+        position: relative;
+        &_svg1{
+          position: absolute;
+          top: 20%;
+          left: 1%;
+        }
+        &_svg2{
+          position: absolute;
+          top: 20%;
+          left: 35.1%;
+        }
         &_input{
           width: 95%;
           background: #d9d9d9;
@@ -86,7 +98,7 @@
           height: 35px;
         }
         input{
-          padding-left: 14px;
+          padding-left: 25px;
           border: none;
         }
         input::placeholder{
