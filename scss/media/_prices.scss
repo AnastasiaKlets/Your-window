@@ -333,7 +333,7 @@
   .prices{
     margin-top: 50px;
     &_wrapper{
-      gap: 40px;
+      gap: 20px;
       width: 100%;
       &_window{
         grid-template-columns: 49% 49% ;
@@ -378,6 +378,9 @@
     &_wrapper{
       &_window{
         &_window{
+          .ImgDop{
+            height: 170px;
+          }
           img{
             height: 170px;
           }

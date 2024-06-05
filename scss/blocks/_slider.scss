@@ -90,10 +90,9 @@
       display: flex;
       flex-direction: column;
       gap: 40px;
-      margin-top: 50px;
       margin: 50px 50px 0 50px;
       button{
-        width: 60%;
+        width: 100%;
         cursor: pointer;
       }
       &_withImg{
@@ -113,6 +112,7 @@
     &_block2{
       display: flex;
       flex-direction: column;
+      margin-top: 20px;
       &_circles{
         position: absolute;
       }

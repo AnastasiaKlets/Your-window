@@ -68,14 +68,23 @@
 }
 @media (max-width: 992px) {
   .measurer{
+    margin-top: 70px;
     &_wrapper{
       display: flex;
       flex-direction: column;
       border-radius: 10px;
       &_form{
         margin: 36px;
+        &_form{
+          &_inputs{
+            input{
+              width: 100%;
+            }
+          }
+        }
         button{
-          width: 76%;
+          width: 100%;
+
         }
         .survey_result_social {
           width: auto;
@@ -86,6 +95,7 @@
 }
 @media (max-width: 768px) {
   .measurer{
+    margin-top: 60px;
     &_wrapper{
       &_form{
         margin: 26px;
@@ -98,12 +108,16 @@
 }
 @media (max-width: 480px) {
   .measurer{
+    margin-top: 25px;
     &_wrapper{
       &_form{
         margin: 16px;
         &_form{
+          &_title{
+            font-size: 20px;
+          }
           button{
-            height: 45px;
+            height: 50px;
           }
         }
         .survey_result_social {

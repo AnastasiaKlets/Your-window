@@ -66,9 +66,17 @@
 @media (max-width: 480px) {
     .reviews {
         &_slide {
+            &_content{
+                div{
+                    font-size: 15px;
+                }
+            }
             &_header {
                 img {
                     width: 17%;
+                }
+                &_title{
+                    font-size: 18px;
                 }
             }
         }

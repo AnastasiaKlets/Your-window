@@ -32,8 +32,8 @@
       margin-top: -30px;
       gap: 11px;
       button{
-        height: 35px;
-        width: 80%;
+        height: 50px;
+        width: 95%;
       }
       &_dop{
         width: 90%;
@@ -67,7 +67,7 @@
       width: 25%;
     }
     &_0{
-      bottom: 200px;
+      bottom: 210px;
       right: 27px;
       width: 24%;
     }
@@ -84,9 +84,10 @@
 }
 @media (max-width: 480px) {
   .installmentPlan{
-    margin-top: 50px;
+    margin-top: 80px;
+    margin-bottom: 0px;
     &_win{
-      bottom: 366px;
+      bottom: 375px;
       width: 25%;
     }
   }

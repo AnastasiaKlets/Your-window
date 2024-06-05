@@ -47,6 +47,9 @@
         &_numbers{
           gap: 2px;
           &_mts{
+            display: flex;
+            align-items: center;
+            gap: 2px;
             a{
               gap: 8px;
             }
