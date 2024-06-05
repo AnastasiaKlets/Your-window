@@ -1,5 +1,6 @@
 @media (max-width: 992px) {
   .askQuestion{
+    margin-top: 50px;
     &_wrapper{
       display: flex;
       flex-direction: column-reverse;
@@ -11,10 +12,12 @@
           width: 90%;
           position: relative;
           left: -40px;
+          bottom: 3px;
         }
         &_block{
           top: 87%;
           left: 55%;
+          gap: 4px;
         }
       }
       &_form{

@@ -61,6 +61,7 @@
 }
 @media (max-width: 768px) {
   .weInstall{
+    margin-top: 60px;
     &_wrapper{
       img{
         height: 280px;
@@ -80,9 +81,16 @@
 }
 @media (max-width: 480px) {
   .weInstall{
+    margin-top: 50px;
     &_wrapper{
       img{
         height: 190px;
+      }
+      &_title{
+        text-align: center;
+        width: 100%;
+        margin-bottom: 5px;
+        font-size: 20px;
       }
       &_row1{
         &_block{

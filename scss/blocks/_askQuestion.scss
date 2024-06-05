@@ -17,7 +17,7 @@
         flex-direction: column;
         width: 100%;
         button{
-          width: 75%;
+          width: 70%;
         }
         &_inputs{
           display: flex;
@@ -41,6 +41,11 @@
         position: absolute;
         top: 77%;
         left: 43%;
+        &_tel{
+          display: flex;
+          align-items: center;
+          gap: 2px  ;
+        }
       }
     }
   }
