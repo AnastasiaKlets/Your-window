@@ -36,6 +36,10 @@
             transition: .7s;
             cursor: pointer;
           }
+          label{
+            display: flex;
+            flex-direction: column-reverse;
+          }
         }
         &_inputs{
           width: 100%;

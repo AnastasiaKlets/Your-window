@@ -23,6 +23,9 @@
         flex-direction: column;
         gap: 3px;
         &_mts{
+          display: flex;
+          align-items: center;
+          gap: 2px;
           a{
             display: flex;
             gap: 10px;
