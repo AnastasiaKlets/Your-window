@@ -80,10 +80,36 @@
   transition: .8s;
   opacity: 1;
 }
-.accessories_wrapper_blocks_block:hover .accessories_wrapper_blocks_block_visible{
-  span{
+.accessories_wrapper_blocks_block:hover .accessories_wrapper_blocks_block_visible {
+  span {
     display: none;
     transition: .8s;
+    opacity: 0;
+  }
+}
+
+.accessories_wrapper_blocks_block_invisible{
+  animation: fadeIn 1s;
+}
+.accessories_wrapper_blocks_block_visible {
+
+  animation: fadeOut  1s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    display: block;
+    opacity: 1;
+  }
+  to {
+    display: none;
     opacity: 0;
   }
 }
