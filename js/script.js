@@ -78,6 +78,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
             dots.push(dot);
         }
 
+        let indicators_offset = container.querySelector(`.${indicatorsClass}`).getBoundingClientRect().left;
         dots.forEach(dot => {
             dot.addEventListener('click', (e) => {
                 const slideTo = e.target.getAttribute('data-slide-to');
@@ -86,6 +87,18 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
                 changeActivity();
                 makeTimer(duration);
             });
+            if (mobile) {
+                dot.addEventListener('touchmove', (e) => {
+                    clearInterval(timer);
+                    let x = e.pageX || e.touches[0].pageX;
+                    slideIndex = Math.ceil((x - indicators_offset) / deleteNotDigits(window.getComputedStyle(dot).width));
+                    if (slideIndex > 0 && slideIndex <= dots.length) {
+                        offset = (deleteNotDigits(width) + gap) * (slideIndex - 1);
+                        changeActivity();
+                        makeTimer(duration);
+                    }
+                });
+            }
         });
     }
 
