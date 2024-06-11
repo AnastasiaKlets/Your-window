@@ -53,7 +53,7 @@
 						</span>
 					</div>
 					<div class="header_wrapper_block_soc">
-						<a href="#">
+						<a href="https://t.me/MedoedDen13th">
 							<img src="icons/telegram.svg" alt="telegram" class="header_wrapper_block_soc_img">
 						</a>
 						<a href="viber://chat?number=%2B375297079979">
@@ -81,32 +81,30 @@
 					<button data-modal class="button title header_wrapper_block_btn">
 						Заказать замер
 					</button>
-					<div class="menu">
-						<input type="checkbox" id="burger-checkbox" class="burger-checkbox">
-						<label for="burger-checkbox" class="burger"></label>
-						<ul class="menu-list">
-							<li>
-								<div class=" menu_header_wrapper_blockUnder">
-									<a href="#survey" class="title">Расчёт стоимости</a>
-									<a href="#WindowPrices" class="title">Цены на окна</a>
-									<a href="#AboutUs" class="title">О нас</a>
-									<a href="#Lamination" class="title">Ламинация</a>
-									<a href="#Portfolio" class="title">Портфолио</a>
-									<a href="#Reviews" class="title">Отзывы</a>
-									<a href="#Contacts" class="title">Контакты</a>
-								</div>
-							<li>
-							<li>
+					<div class="burger-menu">
+						<a href="" class="burger-menu_button">
+							<spun class="burger-menu_lines"></spun>
+						</a>
+						<nav class="burger-menu_nav">
+							<a href="#survey" class="title burger-menu_link">Расчёт стоимости</a>
+							<a href="#WindowPrices" class="title burger-menu_link">Цены на окна</a>
+							<a href="#AboutUs" class="title burger-menu_link">О нас</a>
+							<a href="#Lamination" class="title burger-menu_link">Ламинация</a>
+							<a href="#Portfolio" class="title burger-menu_link">Портфолио</a>
+							<a href="#Reviews" class="title burger-menu_link">Отзывы</a>
+							<a href="#Contacts" class="title burger-menu_link">Контакты</a>
+
+							<div class="header_wrapper_block_socmenu">
 								<div class=" menu_header_wrapper_block_soc">
-									<a href="#">
+									<a href="https://t.me/MedoedDen13th">
 										<img src="icons/telegram.svg" alt="telegram" class="menu_header_wrapper_block_soc_img ">
 									</a>
 									<a href="viber://chat?number=%2B375297079979">
 										<img src="icons/viber.svg" alt="viber" class="menu_header_wrapper_block_soc_img ">
 									</a>
 								</div>
-							<li>
-							<li>
+							</div>
+							<div class="header_wrapper_block_phonemenu">
 								<div class=" menu_header_wrapper_block_time">
 									<img src="icons/time.svg" alt="time"/>
 									<span class="title title_16">
@@ -115,13 +113,12 @@
 										без выходных
 									</span>
 								</div>
-							<li>
-							<li>
-								<button data-modal class="button title  menu_header_wrapper_block_btn">
-									Заказать замер
-								</button>
-							<li>
-						</ul>
+							</div>
+							<button data-consult class="button button_green title header_wrapper_block_btnmenu">
+								Заказать услугу
+							</button>
+						</nav>
+						<div class="burger-menu_overlay"></div>
 					</div>
 				</div>
 				<div class="header_wrapper_blockUnder">
@@ -466,7 +463,7 @@
 				</div>
 				<div id="survey_wrapper_4" class="survey_wrapper">
 					<div class="survey_content">
-						<div class="title title_24 survey_content_title">Выберите необходимый тип окон (один или несколько):</div>
+						<div class="title title_24 survey_content_title">Выберите дополнительные параметры:</div>
 						<div class="survey_body">
 							<label for="survey_form_radio_4-1" class="survey_body_item">
 								<input type="checkbox" name="parameters[]" id="survey_form_radio_4-1" class="survey_form_radio" value="Ламинация"checked>
@@ -536,7 +533,7 @@
 						<div class="title title_20 normal">Выберите мессенджер, на который вам удобно получить стоимость</div>
 						<div title="Выберите один из мессенджеров" class="survey_result_socials">
 							<label for="survey_form_radio_5-1" class="survey_result_social">
-								<input type="radio" name="contact" id="survey_form_radio_5-1" class="survey_form_radio social" value="Звонок" required>
+								<input type="radio" name="contact" id="survey_form_radio_5-1" class="survey_form_radio social" value="Звонок" required checked>
 								<img src="icons/call_s.svg" alt="call">
 							</label>
 							<label for="survey_form_radio_5-2" class="survey_result_social">
@@ -564,7 +561,7 @@
 						<div class="title title_16 trans">Выберите Ваш подарок:</div>
 						<div class="survey_banner_bonuses row">
 							<label for="survey_form_radio_5-5" class="survey_banner_bonus">
-								<input type="radio" name="bonus" id="survey_form_radio_5-5" class="survey_form_radio bonus" value="Москитная сетка" required>
+								<input type="radio" name="bonus" id="survey_form_radio_5-5" class="survey_form_radio bonus" value="Москитная сетка" required checked>
 								<img src="icons/banner_grid.svg" alt="grid">
 								<div class="title title_14 normal">Москитную сетку<br>в подарок</div>
 							</label>
@@ -644,19 +641,19 @@
 						<div title="Выберите один из мессенджеров" class="measurer_wrapper_form_form_icons">
 							<label for="measurer_form_radio_5-1" class="survey_result_social">
 								<img src="img/measurer/phone.svg" alt="call">
-								<input type="radio" name="contact" id="measurer_form_radio_5-1" class="survey_form_radio social" value="Звонок" required>
+								<input type="radio" name="contact" id="measurer_form_radio_5-1" class="survey_form_radio social" value="Звонок"  >
 							</label>
 							<label for="measurer_form_radio_5-2" class="survey_result_social">
 								<img src="icons/viber_s.svg" alt="viber">
-								<input type="radio" name="contact" id="measurer_form_radio_5-2" class="survey_form_radio social" value="Viber" required>
+								<input type="radio" name="contact" id="measurer_form_radio_5-2" class="survey_form_radio social" value="Viber" >
 							</label>
 							<label for="measurer_form_radio_5-3" class="survey_result_social">
 								<img src="icons/teleg_s.svg" alt="telegram">
-								<input type="radio" name="contact" id="measurer_form_radio_5-3" class="survey_form_radio social" value="Telegram" required>
+								<input type="radio" name="contact" id="measurer_form_radio_5-3" class="survey_form_radio social" value="Telegram" >
 							</label>
 							<label for="measurer_form_radio_5-4" class="survey_result_social">
 								<img src="icons/whats_s.svg" alt="whatsapp">
-								<input type="radio" name="contact" id="measurer_form_radio_5-4" class="survey_form_radio social" value="WhatsApp" required>
+								<input type="radio" name="contact" id="measurer_form_radio_5-4" class="survey_form_radio social" value="WhatsApp" >
 							</label>
 						</div>
 						<div class="measurer_wrapper_form_form_inputs">
@@ -1137,9 +1134,8 @@
 						вам подобрать подходящее окно под ваши параметры.
 					</span>
 					<div class="measurer_wrapper_form_form_inputs helpChoice_wrapper_form_inputs">
-						<input type="text" name="phone" placeholder="Введите имя" class="askQuestion_wrapper_form_form_inputs_input" required>
-						<input type="number" name="message" placeholder="+375 (29) ___ __ __" class="askQuestion_wrapper_form_form_inputs_input2" required>
-						<input type="hidden" name="theme" value="Заявка">
+						<input type="text" name="phone" placeholder="+375 (29) ___ __ __" class="askQuestion_wrapper_form_form_inputs_input" required>
+						<input type="number" name="message" placeholder="Введите имя" class="askQuestion_wrapper_form_form_inputs_input2" required><input type="hidden" name="theme" value="Заявка">
 						<input type="hidden" name="utm_city" class="utm_city" value="">
 						<input type="hidden" name="utm_source" class="utm_source" value="">
 						<input type="hidden" name="utm_medium" class="utm_medium" value="">

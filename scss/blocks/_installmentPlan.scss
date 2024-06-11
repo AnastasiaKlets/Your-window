@@ -77,14 +77,15 @@
       gap: 10px;
       &_inputs{
         display: grid;
-        grid-template-columns: 30% 30% 30%;
+        grid-template-columns: 29% 29% 30%;
         justify-content: space-around;
         justify-items: center;
         position: relative;
         &_svg1{
           position: absolute;
-          top: 20%;
-          left: 1%;
+          top: 21%;
+          left: 2%;
+          width: 1.6%;
         }
         &_svg2{
           position: absolute;
