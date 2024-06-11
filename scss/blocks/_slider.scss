@@ -35,11 +35,6 @@
   -webkit-animation:cycletwo 7s linear infinite;
 }
 
-#slider:hover li,{
-  -moz-animation-play-state:paused;
-  -webkit-animation-play-state:paused;
-}
-
 @-moz-keyframes cycle {
   0%  { top:0; }
   25%  { top:0; }
@@ -130,6 +125,7 @@
             align-items: center;
             text-align: center;
             color: #fff;
+            text-shadow: 0 2px rgba(0, 0, 0, 0.62);
           }
           &_titledop{
             margin-left: 36px;

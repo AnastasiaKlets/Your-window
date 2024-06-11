@@ -27,7 +27,16 @@
 		font-size: 64px;
 	}
 }
-
+.title_active{
+	cursor: pointer;
+	text-decoration: none;
+	transition: .6s;
+}
+.title_active:hover{
+	cursor: pointer;
+	text-decoration: underline;
+	transition: .6s;
+}
 .normal {
 	font-weight: 400;
 }
