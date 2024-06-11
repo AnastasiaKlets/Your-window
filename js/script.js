@@ -1,3 +1,5 @@
+$('input[name="phone"]').mask("+370(999)99-999");
+
 let baseUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
 let newUrl = baseUrl;
 history.pushState(null, null, newUrl);
