@@ -122,13 +122,13 @@
 					</div>
 				</div>
 				<div class="header_wrapper_blockUnder">
-					<a href="#survey" class="title title_active">Расчёт стоимости</a>
-					<a href="#WindowPrices" class="title title_active">Цены на окна</a>
-					<a href="#AboutUs" class="title title_active">О нас</a>
-					<a href="#Lamination" class="title title_active">Ламинация</a>
-					<a href="#Portfolio" class="title title_active">Портфолио</a>
-					<a href="#Reviews" class="title title_active">Отзывы</a>
-					<a href="#Contacts" class="title title_active">Контакты</a>
+					<a href="#survey" class="title title_hover">Расчёт стоимости</a>
+					<a href="#WindowPrices" class="title title_hover">Цены на окна</a>
+					<a href="#AboutUs" class="title title_hover">О нас</a>
+					<a href="#Lamination" class="title title_hover">Ламинация</a>
+					<a href="#Portfolio" class="title title_hover">Портфолио</a>
+					<a href="#Reviews" class="title title_hover">Отзывы</a>
+					<a href="#Contacts" class="title title_hover">Контакты</a>
 				</div>
 			</div>
 		</div>
@@ -549,7 +549,9 @@
 								<img src="icons/whats_s.svg" alt="whatsapp">
 							</label>
 						</div>
-						<input type="text" name="phone" placeholder="Ваш номер телефона" class="consult_form_input" required>
+						<div data-tooltip="Введите Ваш номер телефона" style="width: 100%;display: flex; justify-content: center;">
+							<input type="text" name="phone" placeholder="Ваш номер телефона" class="consult_form_input" required>
+						</div>
 						<input type="hidden" name="theme" value="Заявка с квиза">
 						<input type="hidden" name="utm_city" class="utm_city" value="">
 						<input type="hidden" name="utm_source" class="utm_source" value="">
@@ -664,7 +666,10 @@
 							<input type="hidden" name="utm_campaign" class="utm_campaign" value="">
 							<input type="hidden" name="utm_content" class="utm_content" value="">
 							<input type="hidden" name="utm_term" class="utm_term" value="">
-							<input type="text" name="phone" placeholder="Номер телефона" class="consult_form_input" required>
+							<div data-tooltip="Введите Ваш номер телефона" style="width: 100%;display: flex; justify-content: center;">
+								<input type="text" name="phone" placeholder="Номер телефона" class="consult_form_input" required>
+							</div>
+
 						</div>
 						<button type="submit" class="button title_24">
 							Вызвать замерщика

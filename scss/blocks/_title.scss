@@ -37,6 +37,16 @@
 	text-decoration: underline;
 	transition: .6s;
 }
+.title_hover{
+	cursor: pointer;
+	color: #020000;
+	transition: .6s;
+}
+.title_hover:hover{
+	cursor: pointer;
+	color: #aa0719;
+	transition: .6s;
+}
 .normal {
 	font-weight: 400;
 }

@@ -1,4 +1,3 @@
-$('input[name="phone"]').mask("+370(999)99-999");
 
 let baseUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
 let newUrl = baseUrl;
@@ -13,16 +12,7 @@ utms_names.forEach(name => {
     });
 });
 
-let prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        document.getElementById("header").style.top = "0";
-    } else {
-        document.getElementById("header").style.top = "-200px";
-    }
-    prevScrollpos = currentScrollPos;
-}
+$('input[name="phone"]').mask("+375(99)999-99-99");
 
 function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideSelector, wrapperSelector, fieldSelector, indicatorsClass, elementsPerPage = 1, elementsPerPageMobile = 1, columnGap = 0, duration = 0, swipe = false, totalCounter, currentCounter}) {
     let slideIndex = 1,
